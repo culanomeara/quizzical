@@ -1,11 +1,11 @@
-.topic {
+.topic, .answer {
     background-color: black;
     color: white;
     padding: 1rem;
     height: 3rem;
   }
 
-.topics {
+.topics, .answwers {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
