@@ -1,4 +1,4 @@
-var myQuestions = [{
+const myQuestions = '{
         "topic": "Trigonometry",
         "questiontext": "What formula can you use to find the length of a side of a right-angled triangle?",
         "answer": 3,
@@ -21,5 +21,5 @@ var myQuestions = [{
         "questiontext": "What angle betwen 0 and 90degrees has the same Sine and Cosine value?",
         "answer": 3,
         "choices": ["30", "90", "60", "45"]
-    }
+    }'
 ]
