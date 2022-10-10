@@ -1,20 +1,43 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let topics = document.getElementsByClassName("topic");
+document.addEventListener("DOMContentLoaded", function () {
+    let buttons = document.getElementsByTagName("button");
 
-    for (let topic of topics) {
-        topic.addEventListener("click", function() {
-            if (topic.innerHTML === "Trigonometry") {
-                alert("You clicked Trigonometry!");
-            } else {
-                let quizTopic = this.innerHTML;
-                runGame(quizTopic);
+    for (let button of buttons) {
+        button.addEventListener("click", function () {
+
+            var quizTopic="";
+
+            switch (true) {
+                // If topic choice is Trig
+                case this.getAttribute("data-type") === "trigonometry":
+                    alert("You clicked Trig!");
+                    break;
+                // If topic choice is Algebra
+                case this.getAttribute("data-type") === "algebra":
+                    alert("You clicked Algebra!");
+                    break;
+                // If topic choice is Geometry
+                case this.getAttribute("data-type") === "geometry":
+                    alert("You clicked Geometry!");
+                    break;
             }
+            
+            /*if (this.getAttribute("data-type") === "trigonometry") {
+                alert("You clicked Trig!");
+            } else {
+                
+            }*/
+            let quizTopic = this.getAttribute("data-type");
+                runQuiz(quizTopic);
         });
     }
 
-function runQuiz() {
+});
+
+
+function runQuiz(quizTopic) {
 
 }
+
 function getQuestionData() {
 
 }
