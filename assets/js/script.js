@@ -1,13 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
-    
+
     for (let button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "next") {
-                alert("You clicked Next!");
+                for (var i = 1; i < trigonometryQData.length; i++) {
+                    displayTrigQuestion(i);
+                    break;
+                }
             } else {
-                if (this.getAttribute("data-type") === "finish") {
-                    alert("You clicked Finish!");
+                if (this.getAttribute("data-type") === "reset") {
+                    alert("You clicked Reset!");
                 } else {
                     let quizTopic = this.getAttribute("data-type");
 
@@ -43,37 +46,41 @@ var trigonometryQData = [{
 function runQuiz(quizTopic) {
     switch (true) {
         case quizTopic === "trigonometry":
-            displayTrigQuestion();
+            let questNum = 0;
+            displayTrigQuestion(questNum);
         case quizTopic === "algebra":
             // displayAlgebraQuestion();
         case quizTopic === "geometry":
             //  displayGeometryQuestion();
     }
 }
-//const currentQData = "";
 
-function displayTrigQuestion() {
-    for (var i = 0; i < trigonometryQData.length; i++) {
-        let qText = document.getElementById('question');
-        qText.textContent = trigonometryQData[i].questiontext;
-        let a1Text = document.getElementById('ans1');
-        a1Text.textContent = trigonometryQData[i].choices[0];
-        let a2Text = document.getElementById('ans2');
-        a2Text.textContent = trigonometryQData[i].choices[1];
-        let a3Text = document.getElementById('ans3');
-        a3Text.textContent = trigonometryQData[i].choices[2];
-        let a4Text = document.getElementById('ans4');
-        a4Text.textContent = trigonometryQData[i].choices[3];
-    }
+function displayTrigQuestion(questionNumber) {
+    var i = questionNumber;
+    let qNumber = document.getElementById('qNumber');
+    let qNum = i + 1;
+    qNumber.textContent = "Question Number: " + qNum;
+    let qTotal = document.getElementById('qTotal');
+    qTotal.textContent = "Total Qs: " + trigonometryQData.length;
+    let qText = document.getElementById('question');
+    qText.textContent = trigonometryQData[i].questiontext;
+    let a1Text = document.getElementById('ans1');
+    a1Text.textContent = trigonometryQData[i].choices[0];
+    let a2Text = document.getElementById('ans2');
+    a2Text.textContent = trigonometryQData[i].choices[1];
+    let a3Text = document.getElementById('ans3');
+    a3Text.textContent = trigonometryQData[i].choices[2];
+    let a4Text = document.getElementById('ans4');
+    a4Text.textContent = trigonometryQData[i].choices[3];
 }
 
 function checkAnswer(userSelect) {
-let userAnswer = document.getElementById(userSelect).textContent;
-if (userAnswer === trigonometryQData[3].answer) {
-    alert("Well done!")
-} else {
-    alert("You messed up" + userAnswer + trigonometryQData[3].answer)
-}
+    let userAnswer = document.getElementById(userSelect).textContent;
+    if (userAnswer === trigonometryQData[3].answer) {
+        alert("Well done!")
+    } else {
+        alert("You messed up")
+    }
 }
 
 function keepScore() {
