@@ -1,39 +1,44 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
-
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            if (this.getAttribute("data-type") === "next") {
-                for (var i = 1; i < trigonometryQData.length; i++) {
-                    displayTrigQuestion(i);
-                    break;
-                }
-            } else {
-                if (this.getAttribute("data-type") === "reset") {
-                    alert("You clicked Reset!");
-                } else {
-                    let quizTopic = this.getAttribute("data-type");
-
-                    runQuiz(quizTopic);
-
-                };
+    //let buttons = document.getElementsByTagName("button");
+    let counter = 0;
+    const element = document.getElementById("next");
+    element.addEventListener("click", function () {
+        counter++;
+        runQuiz("trigonometry", counter);
+    });
+    /*controlButtons.addEventListener("click", function () {
+        if (this.getAttribute("data-type") === "next") {
+            //for (var i = 1; i < trigonometryQData.length; i++)
+                counter++;
+                runQuiz("tringonometry", counter);
+            
+        } else {
+            if (this.getAttribute("data-type") === "reset") {
+                alert("You clicked Reset!");
             }
+            else {
+                let quizTopic = this.getAttribute("data-type");
+                alert(counter);
+                runQuiz(quizTopic, 3);
+            };
+        };
+    });*/
 
-        });
-    };
 });
+
+
 
 var trigonometryQData = [{
     questiontext: "What formula can you use to find the length of a side of a right-angled triangle?",
-    answer: 3,
+    answer: "Pythagoras' Theorem",
     choices: ["Sine Rule", "Area of a triangle", "Cosine Rule", "Pythagoras' Theorem"]
 }, {
     questiontext: "What method can you use to find the angle in a right-angled triangle?",
-    answer: 1,
+    answer: "SOHCAHTOA",
     choices: ["Pythagoras' Theorem", "SOHCAHTOA", "Area of a triangle", "Cosine Rule"]
 }, {
     questiontext: "If the Sine Value of an angle is positive, which two quadrants will the angles be located?",
-    answer: 0,
+    answer: "1st and 2nd",
     choices: ["1st and 2nd", "1st and 3rd", "1st and 4th", "1st Only"]
 }, {
     questiontext: "What angle betwen 0 and 90 degrees has the same Sine and Cosine value?",
@@ -43,11 +48,10 @@ var trigonometryQData = [{
 
 //This function runQuiz takes in the argument of quizTopic and then using a switch case,
 //calls the relevant topic question function
-function runQuiz(quizTopic) {
+function runQuiz(quizTopic, counter) {
     switch (true) {
         case quizTopic === "trigonometry":
-            let questNum = 0;
-            displayTrigQuestion(questNum);
+            displayTrigQuestion(counter);
         case quizTopic === "algebra":
             // displayAlgebraQuestion();
         case quizTopic === "geometry":
@@ -76,7 +80,7 @@ function displayTrigQuestion(questionNumber) {
 
 function checkAnswer(userSelect) {
     let userAnswer = document.getElementById(userSelect).textContent;
-    if (userAnswer === trigonometryQData[3].answer) {
+    if (userAnswer === trigonometryQData[0].answer) {
         alert("Well done!")
     } else {
         alert("You messed up")
