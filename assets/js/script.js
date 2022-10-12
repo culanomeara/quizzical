@@ -4,26 +4,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const element = document.getElementById("next");
     element.addEventListener("click", function () {
         counter++;
-        runQuiz("trigonometry", counter);
-    });
-    /*controlButtons.addEventListener("click", function () {
-        if (this.getAttribute("data-type") === "next") {
-            //for (var i = 1; i < trigonometryQData.length; i++)
-                counter++;
-                runQuiz("tringonometry", counter);
-            
-        } else {
-            if (this.getAttribute("data-type") === "reset") {
-                alert("You clicked Reset!");
+        if (counter < trigonometryQData.length) {
+            runQuiz("trigonometry", counter);
+            if (counter === trigonometryQData.length - 1) {
+                document.getElementById('next').innerHTML = 'Finish';
+                document.getElementById('next').id = 'finish'
             }
-            else {
-                let quizTopic = this.getAttribute("data-type");
-                alert(counter);
-                runQuiz(quizTopic, 3);
-            };
+        } else {
+            endQuiz();
         };
-    });*/
-
+    });
 });
 
 
@@ -87,6 +77,9 @@ function checkAnswer(userSelect) {
     }
 }
 
+function endQuiz() {
+    alert("The quiz is over");
+}
 function keepScore() {
 
 }
