@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    //let buttons = document.getElementsByTagName("button");
     let counter = 0;
     const element = document.getElementById("next");
     element.addEventListener("click", function () {
@@ -14,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
             endQuiz();
         };
     });
-});
+
 
 
 
@@ -69,8 +67,9 @@ function displayTrigQuestion(questionNumber) {
 }
 
 function checkAnswer(userSelect) {
+
     let userAnswer = document.getElementById(userSelect).textContent;
-    if (userAnswer === trigonometryQData[0].answer) {
+    if (userAnswer === trigonometryQData[counter].answer) {
         alert("Well done!")
     } else {
         alert("You messed up")
@@ -80,6 +79,7 @@ function checkAnswer(userSelect) {
 function endQuiz() {
     alert("The quiz is over");
 }
+
 function keepScore() {
 
-}
+};

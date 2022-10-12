@@ -17,7 +17,7 @@
 
   /* style for questions */
   #question {
-    background-color: black;
+    background-color: blue;
     color: white;
     padding: 1rem;
     height: 3rem;
@@ -26,3 +26,7 @@
   h3 {
     color: white;
   }
+
+  .answer:hover {
+    background-color: yellow;
+}
