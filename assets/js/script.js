@@ -1,4 +1,5 @@
     let counter = 0;
+    let currentScore = 0;
     const element = document.getElementById("next");
     element.addEventListener("click", function () {
         counter++;
@@ -74,7 +75,11 @@ function checkAnswer(userSelect) {
 
     let userAnswer = document.getElementById(userSelect).textContent;
     if (userAnswer === trigonometryQData[counter].answer) {
-        alert("Well done!")
+        currentScore++;
+        let userScore = document.getElementById('score');
+        userScore.textContent = "Score: " + currentScore;
+        
+
     } else {
         alert("You messed up")
     }
@@ -83,7 +88,3 @@ function checkAnswer(userSelect) {
 function endQuiz() {
     alert("The quiz is over");
 }
-
-function keepScore() {
-
-};
