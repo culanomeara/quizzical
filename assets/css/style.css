@@ -1,32 +1,43 @@
 /* style for index page topic choices and quiz page answers */
-.topic, .answer {
-    background-color: black;
-    color: white;
-    padding: 1rem;
-    height: 3rem;
-  }
+.topic,
+.answer {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  height: 3rem;
+}
 
-  /* style for index page topic choices and quiz page answer grid containers */
-.topics, .answers {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
+/* style for index page topic choices and quiz page answer grid containers */
+.topics,
+.answers {
+  background-color: black;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 
-  /* style for questions */
-  #question {
-    background-color: blue;
-    color: white;
-    padding: 1rem;
-    height: 3rem;
-  }
+/* style for questions */
+#question {
+  background-color: blue;
+  color: white;
+  padding: 1rem;
+  height: 3rem;
+}
 
-  h3 {
-    color: white;
-  }
+h3 {
+  color: white;
+}
 
-  .answer:hover {
-    background-color: yellow;
+.answer:hover {
+  background-color: rgb(236, 236, 121);
+}
+
+.correct {
+  background-color: green;
+}
+
+.wrong {
+  background-color: red;
 }
