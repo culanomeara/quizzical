@@ -103,7 +103,7 @@ h3 {
   color: white;
 }
 
-.answer:hover {
+.answer:hover, .topic:hover {
   background-color: rgb(236, 236, 121);
 }
 
