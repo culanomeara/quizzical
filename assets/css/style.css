@@ -1,30 +1,103 @@
-/* style for index page topic choices and quiz page answers */
-.topic,
-.answer {
-  background-color: black;
-  color: white;
-  padding: 1rem;
-  height: 3rem;
+.container {
+  display: grid;
+  grid-template-areas:
+  '. topic1 topic2 topic3 topic4'
+  'qNumber question question question question'
+  'qTotal ans1 ans2 ans3 ans4'
+  'score feedback feedback feedback feedback';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  grid-template-columns: minmax(100px,20%);
 }
+
+/* style for index page topic choices and quiz page answers */
+
 
 /* style for index page topic choices and quiz page answer grid containers */
-.topics,
-.answers {
+/*.topics {
   background-color: black;
-  max-width: 1200px;
+  color: white;
+  max-width: 400px;
   margin: 0 auto;
-  display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}*/
+/*.answers {
+  background-color: orange;
+  color: white;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 1rem;
+}*/
+
+/*.questionInfo {
+  background-color: purple;
+  color: white;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 1rem;
+}*/
+
+#trigonometry {
+  grid-area: topic1;
+}
+#algebra {
+  grid-area: topic2;
+}
+#geometry {
+  grid-area: topic3;
+}
+#statistics {
+  grid-area: topic4;
 }
 
-/* style for questions */
-.questionInfo {
+#question {
+  grid-area: question;
+}
+
+#qNumber {
+  grid-area: qNumber;
+}
+#qTotal {
+  grid-area: qTotal;
+}
+#score {
+  grid-area: score;
+}
+
+#ans1 {
+  grid-area: ans1;
+}
+
+#ans2 {
+  grid-area: ans2;
+}
+
+#ans3 {
+  grid-area: ans3;
+}
+
+#ans4 {
+  grid-area: ans4;
+}
+
+#feedback {
+  grid-area: feedback;
+}
+
+/* style for questions
+ {
   background-color: blue;
   color: white;
   padding: 1rem;
   height: 3rem;
-}
+  max-width: 600px;
+  min-width: 200px;
+  display:grid;
+  grid-template-columns:
+  'question question question'
+  'qNumber qTotal Score'
+}*/
 
 h3 {
   color: white;
