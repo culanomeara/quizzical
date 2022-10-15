@@ -44,6 +44,7 @@
     //This function runQuiz takes in the argument of quizTopic and then using a switch case,
     //calls the relevant topic question function
     function runQuiz(quizTopic, counter) {
+        
         switch (true) {
             case quizTopic === "trigonometry":
                 displayTrigQuestion(counter);
@@ -84,13 +85,14 @@
 
         if (userAnswer === trigonometryQData[counter].answer) {
             currentScore++;
-            let userScore = document.getElementById('score');
-            userScore.textContent = "Score: " + currentScore;
+            
             ansColor.style.backgroundColor="green";
 
         } else {
             ansColor.style.backgroundColor="red";
         }
+        let userScore = document.getElementById('score');
+            userScore.textContent = "Score: " + currentScore;
     }
 
     function endQuiz() {

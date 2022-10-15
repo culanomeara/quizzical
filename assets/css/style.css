@@ -19,7 +19,7 @@
 }
 
 /* style for questions */
-#question {
+.questionInfo {
   background-color: blue;
   color: white;
   padding: 1rem;
