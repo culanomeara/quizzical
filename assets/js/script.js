@@ -1,5 +1,6 @@
     let counter = 0;
     let currentScore = 0;
+
     const element = document.getElementById("next");
     element.addEventListener("click", function () {
         counter++;
@@ -11,10 +12,13 @@
             runQuiz("trigonometry", counter);
             if (counter === trigonometryQData.length - 1) {
                 document.getElementById('next').innerHTML = 'Finish';
-                document.getElementById('next').id = 'finish'
+                document.getElementById('next').id = 'finish';
+
             }
         } else {
             endQuiz();
+            document.getElementById('finish').innerHTML = 'Next';
+            document.getElementById('finish').id = 'next';
         };
     });
 
@@ -46,10 +50,14 @@
     //This function runQuiz takes in the argument of quizTopic and then using a switch case,
     //calls the relevant topic question function
     function runQuiz(quizTopic, counter) {
-
+        document.getElementById('trigonometry').classList.add('disabled');
+        document.getElementById('algebra').classList.add('disabled');
+        document.getElementById('geometry').classList.add('disabled');
+        document.getElementById('statistics').classList.add('disabled');
         switch (true) {
             case quizTopic === "trigonometry":
                 displayTrigQuestion(counter);
+                document.getElementById('trigonometry').style.backgroundColor = "orange";
             case quizTopic === "algebra":
                 // displayAlgebraQuestion();
             case quizTopic === "geometry":
@@ -91,11 +99,12 @@
 
         if (userAnswer === trigonometryQData[counter].answer) {
             currentScore++;
-
+            document.getElementById('feedback').textContent = "Well done!";
             ansColor.style.backgroundColor = "green";
 
         } else {
             ansColor.style.backgroundColor = "red";
+            document.getElementById('feedback').textContent = "Oops! The correct answer is " + trigonometryQData[counter].answer;
         }
         let userScore = document.getElementById('score');
         userScore.textContent = "Score: " + currentScore;
@@ -103,6 +112,15 @@
 
     function endQuiz() {
         alert("The quiz is over");
+        document.getElementById('trigonometry').classList.remove('disabled');
+        document.getElementById('trigonometry').style.backgroundColor = "";
+        document.getElementById('algebra').classList.remove('disabled');
+        document.getElementById('algebra').style.backgroundColor = "";
+        document.getElementById('geometry').classList.remove('disabled');
+        document.getElementById('geometry').style.backgroundColor = "";
+        document.getElementById('statistics').classList.remove('disabled');
+        document.getElementById('statistics').style.backgroundColor = "";
+
     }
 
     function resetColor(userSelect) {
