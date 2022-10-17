@@ -3,7 +3,7 @@
     const element = document.getElementById("next");
     element.addEventListener("click", function () {
         counter++;
-
+        document.body.classList.remove('disabled');
         if (counter < trigonometryQData.length) {
             runQuiz("trigonometry", counter);
             if (counter === trigonometryQData.length - 1) {
@@ -79,7 +79,8 @@
     }
 
     function checkAnswer(userSelect) {
-
+        document.body.classList.add('disabled');
+        }
         let userAnswer = document.getElementById(userSelect).textContent;
         let ansColor = document.getElementById(userSelect);
 
