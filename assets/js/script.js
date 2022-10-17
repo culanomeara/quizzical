@@ -3,13 +3,15 @@
     const element = document.getElementById("next");
     element.addEventListener("click", function () {
         counter++;
-        document.body.classList.remove('disabled');
+        document.getElementById('ans1').classList.remove('disabled');
+        document.getElementById('ans2').classList.remove('disabled');
+        document.getElementById('ans3').classList.remove('disabled');
+        document.getElementById('ans4').classList.remove('disabled');
         if (counter < trigonometryQData.length) {
             runQuiz("trigonometry", counter);
             if (counter === trigonometryQData.length - 1) {
                 document.getElementById('next').innerHTML = 'Finish';
                 document.getElementById('next').id = 'finish'
-
             }
         } else {
             endQuiz();
@@ -44,7 +46,7 @@
     //This function runQuiz takes in the argument of quizTopic and then using a switch case,
     //calls the relevant topic question function
     function runQuiz(quizTopic, counter) {
-        
+
         switch (true) {
             case quizTopic === "trigonometry":
                 displayTrigQuestion(counter);
@@ -66,34 +68,37 @@
         qText.textContent = trigonometryQData[i].questiontext;
         let a1Text = document.getElementById('ans1');
         a1Text.textContent = trigonometryQData[i].choices[0];
-        a1Text.style.backgroundColor='';
+        a1Text.style.backgroundColor = '';
         let a2Text = document.getElementById('ans2');
         a2Text.textContent = trigonometryQData[i].choices[1];
-        a2Text.style.backgroundColor='';
+        a2Text.style.backgroundColor = '';
         let a3Text = document.getElementById('ans3');
         a3Text.textContent = trigonometryQData[i].choices[2];
-        a3Text.style.backgroundColor='';
+        a3Text.style.backgroundColor = '';
         let a4Text = document.getElementById('ans4');
         a4Text.textContent = trigonometryQData[i].choices[3];
-        a4Text.style.backgroundColor='';
+        a4Text.style.backgroundColor = '';
     }
 
     function checkAnswer(userSelect) {
-        document.body.classList.add('disabled');
-        }
+        document.getElementById('ans1').classList.add('disabled');
+        document.getElementById('ans2').classList.add('disabled');
+        document.getElementById('ans3').classList.add('disabled');
+        document.getElementById('ans4').classList.add('disabled');
+
         let userAnswer = document.getElementById(userSelect).textContent;
         let ansColor = document.getElementById(userSelect);
 
         if (userAnswer === trigonometryQData[counter].answer) {
             currentScore++;
-            
-            ansColor.style.backgroundColor="green";
+
+            ansColor.style.backgroundColor = "green";
 
         } else {
-            ansColor.style.backgroundColor="red";
+            ansColor.style.backgroundColor = "red";
         }
         let userScore = document.getElementById('score');
-            userScore.textContent = "Score: " + currentScore;
+        userScore.textContent = "Score: " + currentScore;
     }
 
     function endQuiz() {
