@@ -137,7 +137,7 @@
 
     function endQuiz() {
         alert("Your score was " + currentScore);
-        document.getElementById('trigonometry').classList.remove('disabled');
+        /*document.getElementById('trigonometry').classList.remove('disabled');
         document.getElementById('trigonometry').style.backgroundColor = "";
         document.getElementById('algebra').classList.remove('disabled');
         document.getElementById('algebra').style.backgroundColor = "";
@@ -154,7 +154,8 @@
         document.getElementById('question').textContent = "";
         document.getElementById('qNumber').textContent = "";
         document.getElementById('qTotal').textContent = "";
-        document.getElementById('score').textContent = "";
+        document.getElementById('score').textContent = "";*/
+        location.reload();
         counter = 0;
         currentScore = 0;
     }
