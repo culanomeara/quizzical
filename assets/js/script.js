@@ -5,9 +5,12 @@
     element.addEventListener("click", function () {
         counter++;
         enableAnswers();
-        if (counter < trigonometryQData.length) {
-            runQuiz("trigonometry", counter);
-            if (counter === trigonometryQData.length - 1) {
+        currentQtopic = checkTopic();
+        document.getElementById('feedback').textContent = "";
+        if (counter < 4) {
+            
+            runQuiz(currentQtopic, counter);
+            if (counter === 3) {
                 document.getElementById('next').innerHTML = 'Finish';
                 document.getElementById('next').id = 'finish';
             }
@@ -64,20 +67,21 @@
         answer: "Cannot divide a number by 0",
         choices: ["Cannot divide a number by 0", "0", "1", "the number"]
     }];
+
     //This function runQuiz takes in the argument of quizTopic and then using a switch case,
     //calls the relevant topic question function
     function runQuiz(quizTopic, counter) {
         disableTopics();
         switch (true) {
-            case quizTopic === "trigonometry":
+            case quizTopic == "trigonometry":
                 displayTrigQuestion(counter);
-                alert('Trig section' + quizTopic);
                 document.getElementById('trigonometry').style.backgroundColor = "orange";
-            case quizTopic === "algebra":
+                break;
+            case quizTopic == "algebra":
                 displayAlgebraQuestion(counter);
-                alert('Algebra section' + quizTopic);
                 document.getElementById('algebra').style.backgroundColor = "orange";
-            case quizTopic === "geometry":
+                break;
+            case quizTopic == "geometry":
                 //  displayGeometryQuestion();
         }
     }
@@ -118,21 +122,26 @@
 
     function checkAnswer(userSelect) {
         disableAnswers();
-
+        let correctanswer;
+        let currenttopic = checkTopic();
         let userAnswer = document.getElementById(userSelect).textContent;
         let ansColor = document.getElementById(userSelect);
-
-        if (userAnswer === trigonometryQData[counter].answer) {
+        if (currenttopic == "trigonometry") {
+            correctanswer = trigonometryQData[counter].answer;
+        } else if (
+            currenttopic == "algebra") {
+            correctanswer = algebraQData[counter].answer;
+        };
+        if (userAnswer == correctanswer) {
             currentScore++;
             document.getElementById('feedback').textContent = "Well done!";
             ansColor.style.backgroundColor = "green";
 
         } else {
+            document.getElementById('feedback').textContent = "Oops! The correct answer is " + correctanswer;
             ansColor.style.backgroundColor = "red";
-            document.getElementById('feedback').textContent = "Oops! The correct answer is " + trigonometryQData[counter].answer;
         }
-        let userScore = document.getElementById('score');
-        userScore.textContent = "Score: " + currentScore;
+        document.getElementById('score').textContent = "Score: " + currentScore;
     }
 
     function endQuiz() {
@@ -160,11 +169,6 @@
         currentScore = 0;
     }
 
-    function resetColor(userSelect) {
-        let bgColor = document.getElementById(userSelect);
-        bgColor.style.backgroundColor = "black";
-    }
-
     function disableTopics() {
         document.getElementById('trigonometry').classList.add('disabled');
         document.getElementById('algebra').classList.add('disabled');
@@ -179,9 +183,21 @@
         document.getElementById('ans4').classList.remove('disabled');
     }
 
-    function disableAnswers () {
+    function disableAnswers() {
         document.getElementById('ans1').classList.add('disabled');
         document.getElementById('ans2').classList.add('disabled');
         document.getElementById('ans3').classList.add('disabled');
         document.getElementById('ans4').classList.add('disabled');
     }
+
+    function checkTopic() {
+        if (document.getElementById('trigonometry').style.backgroundColor == 'orange') {
+            usertopic = "trigonometry";
+        } else if (document.getElementById('algebra').style.backgroundColor =='orange') {
+                usertopic = "algebra";
+            }
+        else {
+            alert('wahts wrong?');
+        }
+        return usertopic;
+    };
