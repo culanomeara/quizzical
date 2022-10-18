@@ -4,10 +4,7 @@
     const element = document.getElementById("next");
     element.addEventListener("click", function () {
         counter++;
-        document.getElementById('ans1').classList.remove('disabled');
-        document.getElementById('ans2').classList.remove('disabled');
-        document.getElementById('ans3').classList.remove('disabled');
-        document.getElementById('ans4').classList.remove('disabled');
+        enableAnswers();
         if (counter < trigonometryQData.length) {
             runQuiz("trigonometry", counter);
             if (counter === trigonometryQData.length - 1) {
@@ -70,10 +67,7 @@
     //This function runQuiz takes in the argument of quizTopic and then using a switch case,
     //calls the relevant topic question function
     function runQuiz(quizTopic, counter) {
-        document.getElementById('trigonometry').classList.add('disabled');
-        document.getElementById('algebra').classList.add('disabled');
-        document.getElementById('geometry').classList.add('disabled');
-        document.getElementById('statistics').classList.add('disabled');
+        disableTopics();
         switch (true) {
             case quizTopic === "trigonometry":
                 displayTrigQuestion(counter);
@@ -82,6 +76,7 @@
             case quizTopic === "algebra":
                 displayAlgebraQuestion(counter);
                 alert('Algebra section' + quizTopic);
+                document.getElementById('algebra').style.backgroundColor = "orange";
             case quizTopic === "geometry":
                 //  displayGeometryQuestion();
         }
@@ -122,10 +117,7 @@
     }
 
     function checkAnswer(userSelect) {
-        document.getElementById('ans1').classList.add('disabled');
-        document.getElementById('ans2').classList.add('disabled');
-        document.getElementById('ans3').classList.add('disabled');
-        document.getElementById('ans4').classList.add('disabled');
+        disableAnswers();
 
         let userAnswer = document.getElementById(userSelect).textContent;
         let ansColor = document.getElementById(userSelect);
@@ -170,4 +162,25 @@
     function resetColor(userSelect) {
         let bgColor = document.getElementById(userSelect);
         bgColor.style.backgroundColor = "black";
+    }
+
+    function disableTopics() {
+        document.getElementById('trigonometry').classList.add('disabled');
+        document.getElementById('algebra').classList.add('disabled');
+        document.getElementById('geometry').classList.add('disabled');
+        document.getElementById('statistics').classList.add('disabled');
+    }
+
+    function enableAnswers() {
+        document.getElementById('ans1').classList.remove('disabled');
+        document.getElementById('ans2').classList.remove('disabled');
+        document.getElementById('ans3').classList.remove('disabled');
+        document.getElementById('ans4').classList.remove('disabled');
+    }
+
+    function disableAnswers () {
+        document.getElementById('ans1').classList.add('disabled');
+        document.getElementById('ans2').classList.add('disabled');
+        document.getElementById('ans3').classList.add('disabled');
+        document.getElementById('ans4').classList.add('disabled');
     }
