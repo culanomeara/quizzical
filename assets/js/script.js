@@ -48,24 +48,24 @@
 
     var algebraQData = [{
         topic: "algebra",
-        questiontext: "Do you know anything about Algebra?",
-        answer: "Of course",
-        choices: ["Yes", "No", "Don't know", "Of course"]
+        questiontext: "What does HCF stand for?",
+        answer: "Highest Common Factor",
+        choices: ["Hypothetical Common Fact", "Highest Cumulative Form", "Highest Common Factor", "Hypotenuse Change Face"]
     }, {
         topic: "algebra",
-        questiontext: "AlgebraWhat method can you use to find the angle in a right-angled triangle?",
-        answer: "SOHCAHTOA",
-        choices: ["Pythagoras' Theorem", "SOHCAHTOA", "Area of a triangle", "Cosine Rule"]
+        questiontext: "The order of operations in Maths is? ",
+        answer: "BIRDMAS",
+        choices: ["BIRDMAS", "Multiply, Divide, Add, Subtract", "What you need to type into calculator", "As they appear on the page"]
     }, {
         topic: "algebra",
-        questiontext: "AlgebraIf the Sine Value of an angle is positive, which two quadrants will the angles be located?",
-        answer: "1st and 2nd",
-        choices: ["1st and 2nd", "1st and 3rd", "1st and 4th", "1st Only"]
+        questiontext: "The -b formula is use to find what?",
+        answer: "Roots of a quadratic",
+        choices: ["Length of a line segment", "Factors", "The square root of a number", "Roots of a quadratic"]
     }, {
         topic: "algebra",
-        questiontext: "algebraWhat angle betwen 0 and 90 degrees has the same Sine and Cosine value?",
-        answer: "30",
-        choices: ["30", "90", "60", "45"]
+        questiontext: "If you divide any number by 0, what answer do you get?",
+        answer: "Cannot divide a number by 0",
+        choices: ["Cannot divide a number by 0", "0", "1", "the number"]
     }];
     //This function runQuiz takes in the argument of quizTopic and then using a switch case,
     //calls the relevant topic question function
