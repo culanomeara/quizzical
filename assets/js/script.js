@@ -46,6 +46,27 @@
         choices: ["30", "90", "60", "45"]
     }];
 
+    var algebraQData = [{
+        topic: "algebra",
+        questiontext: "Do you know anything about Algebra?",
+        answer: "Of course",
+        choices: ["Yes", "No", "Don't know", "Of course"]
+    }, {
+        topic: "algebra",
+        questiontext: "AlgebraWhat method can you use to find the angle in a right-angled triangle?",
+        answer: "SOHCAHTOA",
+        choices: ["Pythagoras' Theorem", "SOHCAHTOA", "Area of a triangle", "Cosine Rule"]
+    }, {
+        topic: "algebra",
+        questiontext: "AlgebraIf the Sine Value of an angle is positive, which two quadrants will the angles be located?",
+        answer: "1st and 2nd",
+        choices: ["1st and 2nd", "1st and 3rd", "1st and 4th", "1st Only"]
+    }, {
+        topic: "algebra",
+        questiontext: "algebraWhat angle betwen 0 and 90 degrees has the same Sine and Cosine value?",
+        answer: "30",
+        choices: ["30", "90", "60", "45"]
+    }];
     //This function runQuiz takes in the argument of quizTopic and then using a switch case,
     //calls the relevant topic question function
     function runQuiz(quizTopic, counter) {
@@ -56,9 +77,11 @@
         switch (true) {
             case quizTopic === "trigonometry":
                 displayTrigQuestion(counter);
+                alert('Trig section' + quizTopic);
                 document.getElementById('trigonometry').style.backgroundColor = "orange";
             case quizTopic === "algebra":
-                // displayAlgebraQuestion();
+                displayAlgebraQuestion(counter);
+                alert('Algebra section' + quizTopic);
             case quizTopic === "geometry":
                 //  displayGeometryQuestion();
         }
@@ -69,22 +92,33 @@
         let qNumber = document.getElementById('qNumber');
         let qNum = i + 1;
         qNumber.textContent = "Question Number: " + qNum;
-        let qTotal = document.getElementById('qTotal');
-        qTotal.textContent = "Total Qs: " + trigonometryQData.length;
-        let qText = document.getElementById('question');
-        qText.textContent = trigonometryQData[i].questiontext;
-        let a1Text = document.getElementById('ans1');
-        a1Text.textContent = trigonometryQData[i].choices[0];
-        a1Text.style.backgroundColor = '';
-        let a2Text = document.getElementById('ans2');
-        a2Text.textContent = trigonometryQData[i].choices[1];
-        a2Text.style.backgroundColor = '';
-        let a3Text = document.getElementById('ans3');
-        a3Text.textContent = trigonometryQData[i].choices[2];
-        a3Text.style.backgroundColor = '';
-        let a4Text = document.getElementById('ans4');
-        a4Text.textContent = trigonometryQData[i].choices[3];
-        a4Text.style.backgroundColor = '';
+        document.getElementById('qTotal').textContent = "Total Qs: " + trigonometryQData.length;
+        document.getElementById('question').textContent = trigonometryQData[i].questiontext;
+        document.getElementById('ans1').textContent = trigonometryQData[i].choices[0];
+        document.getElementById('ans1').style.backgroundColor = '';
+        document.getElementById('ans2').textContent = trigonometryQData[i].choices[1];
+        document.getElementById('ans2').style.backgroundColor = '';
+        document.getElementById('ans3').textContent = trigonometryQData[i].choices[2];
+        document.getElementById('ans3').style.backgroundColor = '';
+        document.getElementById('ans4').textContent = trigonometryQData[i].choices[3];
+        document.getElementById('ans4').style.backgroundColor = '';
+    }
+
+    function displayAlgebraQuestion(questionNumber) {
+        var i = questionNumber;
+        let qNumber = document.getElementById('qNumber');
+        let qNum = i + 1;
+        qNumber.textContent = "Question Number: " + qNum;
+        document.getElementById('qTotal').textContent = "Total Qs: " + algebraQData.length;
+        document.getElementById('question').textContent = algebraQData[i].questiontext;
+        document.getElementById('ans1').textContent = algebraQData[i].choices[0];
+        document.getElementById('ans1').style.backgroundColor = '';
+        document.getElementById('ans2').textContent = algebraQData[i].choices[1];
+        document.getElementById('ans2').style.backgroundColor = '';
+        document.getElementById('ans3').textContent = algebraQData[i].choices[2];
+        document.getElementById('ans3').style.backgroundColor = '';
+        document.getElementById('ans4').textContent = algebraQData[i].choices[3];
+        document.getElementById('ans4').style.backgroundColor = '';
     }
 
     function checkAnswer(userSelect) {
