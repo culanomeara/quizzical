@@ -191,13 +191,14 @@
     }
 
     function checkTopic() {
+        let usertopic=("None selected");
         if (document.getElementById('trigonometry').style.backgroundColor == 'orange') {
             usertopic = "trigonometry";
         } else if (document.getElementById('algebra').style.backgroundColor =='orange') {
                 usertopic = "algebra";
             }
         else {
-            alert('wahts wrong?');
+            alert('Please select a topic');
         }
         return usertopic;
     };
