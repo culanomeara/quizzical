@@ -7,8 +7,10 @@
         enableAnswers();
         currentQtopic = checkTopic();
         document.getElementById('feedback').textContent = "";
+        if (currentQtopic == "none") {
+            alert('Please select a topic');
+        } else
         if (counter < 4) {
-            
             runQuiz(currentQtopic, counter);
             if (counter === 3) {
                 document.getElementById('next').innerHTML = 'Finish';
@@ -191,14 +193,14 @@
     }
 
     function checkTopic() {
-        let usertopic=("None selected");
+        let usertopic = ("None");
         if (document.getElementById('trigonometry').style.backgroundColor == 'orange') {
             usertopic = "trigonometry";
-        } else if (document.getElementById('algebra').style.backgroundColor =='orange') {
-                usertopic = "algebra";
-            }
-        else {
+        } else if (document.getElementById('algebra').style.backgroundColor == 'orange') {
+            usertopic = "algebra";
+        } else {
             alert('Please select a topic');
+            location.reload();
         }
         return usertopic;
     };
