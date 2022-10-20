@@ -6,17 +6,19 @@ $cyber-yellow: rgba(255, 208, 0, 1);
 $golden-yellow: rgba(255, 221, 0, 1); */
 
 .container {
-  display: grid;
-  grid-template-areas:
-  '. topic1 topic2 topic3 topic4'
-  'qNumber question question question question'
-  'qTotal ans1 ans2 ans3 ans4'
-  'score feedback feedback feedback feedback';
-  gap: 10px;
-  background-color: rgba(255, 170, 0, 1);
-  padding: 10px;
-  grid-template-columns: minmax(100px,20%);
-}
+    display: grid;
+    grid-template-areas:
+    'topic1 topic2 topic3 topic4'
+    'qNumber qTotal . score'
+    'question question question question'
+    'ans1 ans2 ans3 ans4'
+    'feedback feedback feedback feedback';
+    gap: 5px;
+    
+    background-color: rgba(255, 170, 0, 0.5);
+    padding: 5px;
+    grid-template-columns: minmax(150px,20%);
+  };
 
 /* style for index page topic choices and quiz page answers */
 
@@ -125,3 +127,23 @@ h3 {
 .disabled {
   pointer-events: none;
 }
+
+@media screen and (max-width: 400px) {
+  .container {
+  display: grid;
+    grid-template-areas:
+    'topic1 topic2'
+    'topic3 topic4'
+    'qNumber qTotal'
+    'score score'
+    'question question'
+    'ans1 ans2'
+    'ans3 ans4'
+    'feedback feedback';
+    gap: 5px;
+    
+    background-color: rgba(255, 170, 0, 0.5);
+    padding: 5px;
+    grid-template-columns: minmax(150px,20%);
+  }
+  };
