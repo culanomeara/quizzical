@@ -6,58 +6,39 @@ $cyber-yellow: rgba(255, 208, 0, 1);
 $golden-yellow: rgba(255, 221, 0, 1); */
 
 .container {
-    display: grid;
-    grid-template-areas:
+  display: grid;
+  grid-template-areas:
     'topic1 topic2 topic3 topic4'
     'qNumber qTotal . score'
     'question question question question'
     'ans1 ans2 ans3 ans4'
     'feedback feedback feedback feedback';
-    gap: 5px;
-    
-    background-color: rgba(255, 170, 0, 0.5);
-    padding: 5px;
-    grid-template-columns: minmax(150px,20%);
-  };
-
-/* style for index page topic choices and quiz page answers */
-
-
-/* style for index page topic choices and quiz page answer grid containers */
-/*.topics {
-  background-color: black;
-  color: white;
-  max-width: 400px;
-  margin: 0 auto;
-  gap: 1rem;
-}*/
-/*.answers {
-  background-color: orange;
-  color: white;
-  max-width: 400px;
-  margin: 0 auto;
-  gap: 1rem;
-}*/
-
-/*.questionInfo {
-  background-color: purple;
-  color: white;
-  max-width: 400px;
-  margin: 0 auto;
-  gap: 1rem;
-}*/
+  gap: 5px;
+  border:1px solid;
+  border-color: black;
+  background-color: rgba(255, 170, 0, 0.5);
+  padding: 5px;
+  grid-template-columns: minmax(150px, 20%);
+};
 
 #trigonometry {
   grid-area: topic1;
+  border:1px solid;
 }
+
 #algebra {
   grid-area: topic2;
+  border:1px solid;
 }
+
 #geometry {
   grid-area: topic3;
+  border:1px solid;
 }
+
 #statistics {
   grid-area: topic4;
+  border:1px solid;
 }
 
 #question {
@@ -67,9 +48,11 @@ $golden-yellow: rgba(255, 221, 0, 1); */
 #qNumber {
   grid-area: qNumber;
 }
+
 #qTotal {
   grid-area: qTotal;
 }
+
 #score {
   grid-area: score;
 }
@@ -94,25 +77,12 @@ $golden-yellow: rgba(255, 221, 0, 1); */
   grid-area: feedback;
 }
 
-/* style for questions
- {
-  background-color: blue;
-  color: white;
-  padding: 1rem;
-  height: 3rem;
-  max-width: 600px;
-  min-width: 200px;
-  display:grid;
-  grid-template-columns:
-  'question question question'
-  'qNumber qTotal Score'
-}*/
-
 h3 {
   color: white;
 }
 
-.answer:hover, .topic:hover {
+.answer:hover,
+.topic:hover {
   background-color: rgb(236, 236, 121);
 }
 
@@ -130,20 +100,21 @@ h3 {
 
 @media screen and (max-width: 400px) {
   .container {
-  display: grid;
+    display: grid;
     grid-template-areas:
-    'topic1 topic2'
-    'topic3 topic4'
-    'qNumber qTotal'
-    'score score'
-    'question question'
-    'ans1 ans2'
-    'ans3 ans4'
-    'feedback feedback';
+      'topic1 topic2'
+      'topic3 topic4'
+      'qNumber qTotal'
+      'score score'
+      'question question'
+      'ans1 ans2'
+      'ans3 ans4'
+      'feedback feedback';
     gap: 5px;
-    
+
     background-color: rgba(255, 170, 0, 0.5);
     padding: 5px;
-    grid-template-columns: minmax(150px,20%);
+    grid-template-columns: minmax(150px, 20%);
+    border-color: black;
   }
-  };
+}
