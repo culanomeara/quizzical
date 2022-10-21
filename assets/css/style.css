@@ -13,36 +13,33 @@ $golden-yellow: rgba(255, 221, 0, 1); */
     'question question question question'
     'ans1 ans2 ans3 ans4'
     'feedback feedback feedback feedback';
-  gap: 5px;
-  border:1px solid;
-  border-color: black;
-  background-color: rgba(255, 170, 0, 0.5);
-  padding: 5px;
+  row-gap: 10px;
+  column-gap: 5px;
+  padding: 10px;
+  background-color: white;
   grid-template-columns: minmax(150px, 20%);
 };
 
 #trigonometry {
   grid-area: topic1;
-  border:1px solid;
 }
 
 #algebra {
   grid-area: topic2;
-  border:1px solid;
+  background-color: lightcyan;
 }
 
 #geometry {
   grid-area: topic3;
-  border:1px solid;
 }
 
 #statistics {
   grid-area: topic4;
-  border:1px solid;
 }
 
 #question {
   grid-area: question;
+  background-color: aqua;
 }
 
 #qNumber {
@@ -59,18 +56,22 @@ $golden-yellow: rgba(255, 221, 0, 1); */
 
 #ans1 {
   grid-area: ans1;
+  background-color: aqua;
 }
 
 #ans2 {
   grid-area: ans2;
+  background-color: gainsboro;
 }
 
 #ans3 {
   grid-area: ans3;
+  background-color: bisque;
 }
 
 #ans4 {
   grid-area: ans4;
+  background-color: mediumaquamarine;
 }
 
 #feedback {
