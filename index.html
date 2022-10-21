@@ -17,7 +17,7 @@
 <body>
     <h1>Let's get Quizzical about Maths</h1>
     <h2>Select what topic you want to quiz yourself on:</h2>
-    <div class="container" id="myGrid">
+    <div class="container">
         <div class="topic" id="trigonometry" onclick="runQuiz('trigonometry', 0)">Trigonometry</div>
         <div class="topic" id="algebra" onclick="runQuiz('algebra', 0)">Algebra</div>
         <div class="topic" id="geometry" onclick="runQuiz('geometry', 0)">Geometry</div>
@@ -32,13 +32,12 @@
         <div class="answer" id="ans3" onclick="checkAnswer('ans3')"></div>
         <div class="answer" id="ans4" onclick="checkAnswer('ans4')"></div>
         <div id="feedback"></div>
-    </div>
-    <div class="controlButton">
-        <button id="next" class="controls">Next
-        </button>
+        <!--div class="controlButton"-->
         <!--button id="finish" class="controls">Finish
         </button-->
     </div>
+    <button class="controls" id="next">Next
+    </button>
 
     <script src="assets/js/script.js"></script>
     <noscript>

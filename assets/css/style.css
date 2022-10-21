@@ -16,17 +16,21 @@ $golden-yellow: rgba(255, 221, 0, 1); */
   row-gap: 10px;
   column-gap: 5px;
   padding: 10px;
-  background-color: white;
-  grid-template-columns: minmax(150px, 20%);
+  grid-template-columns: minmax(150px, 25%);
+  grid-template-rows: 25px 25px 50px 50px 25px;
 };
+
+.container .topic {
+  border-radius: 5px;
+}
 
 #trigonometry {
   grid-area: topic1;
+  height: 20px;
 }
 
 #algebra {
   grid-area: topic2;
-  background-color: lightcyan;
 }
 
 #geometry {
@@ -39,7 +43,7 @@ $golden-yellow: rgba(255, 221, 0, 1); */
 
 #question {
   grid-area: question;
-  background-color: aqua;
+
 }
 
 #qNumber {

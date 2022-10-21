@@ -26,7 +26,7 @@
 
 
 
-    
+
     //This function runQuiz takes in the argument of quizTopic and then using a switch case,
     //calls the relevant topic question function
     function runQuiz(quizTopic, counter) {
@@ -205,5 +205,3 @@
         answer: "Cannot divide a number by 0",
         choices: ["Cannot divide a number by 0", "0", "1", "the number"]
     }];
-
-    
