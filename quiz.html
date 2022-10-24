@@ -10,28 +10,33 @@
         content="Quizzes about Junior Cycle Mathematics topics: Trigonometry, Algebra, Geometry, Statistics and Probability">
     <meta name="keywords"
         content="Quiz, Junior Cycle, Ordinary level, Higher level, Mathematics, Maths, Trigonometry, Algebra, Geometry, Statistics, Probability">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Quizzical</title>
 </head>
 
 <body>
-    <h1>Let's get Quizzical</h1>
-    <h2>Topic name here</h2>
-    <!--button onclick="displayQuestion();">Start Quiz</button-->
-    <h3 id="question">Question Qnum of Qtotal: Question goes here</h3><h3 class="score">Score here</h3>
-    <!--This is the grid for the 4 answers-->
-    <div class="answers">
-        <div class="answer" id="ans1">A1</div>
-        <div class="answer" id="ans2">A2</div>
-        <div class="answer" id="ans3">A3</div>
-        <div class="answer" id="ans4">A4</div>
+    <h1>Let's get Quizzical about Maths</h1>
+    <div class="container">
+        <div id="question"></div>
+        <div id="qNumber"></div>
+        <div id="qTotal"></div>
+        <div id="score"></div>
+        <div class="answer" id="ans1" onclick="checkAnswer('ans1')"></div>
+        <div class="answer" id="ans2" onclick="checkAnswer('ans2')"></div>
+        <div class="answer" id="ans3" onclick="checkAnswer('ans3')"></div>
+        <div class="answer" id="ans4" onclick="checkAnswer('ans4')"></div>
+        <div id="feedback"></div>
+        <!--div class="controlButton"-->
+        <!--button id="finish" class="controls">Finish
+        </button-->
     </div>
-    
-
-<script src="assets/js/script.js"></script>
-<noscript>
-    Oh no! Your browser does not support JavaScript!
-  </noscript>
+    <button class="controls" id="next">Next
+    </button>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/script.js"></script>
+    <noscript>
+        Oh no! Your browser does not support JavaScript!
+    </noscript>
 </body>
 
 </html>

@@ -8,7 +8,6 @@ $golden-yellow: rgba(255, 221, 0, 1); */
 .container {
   display: grid;
   grid-template-areas:
-    'topic1 topic2 topic3 topic4'
     'qNumber qTotal . score'
     'question question question question'
     'ans1 ans2 ans3 ans4'
@@ -60,22 +59,18 @@ $golden-yellow: rgba(255, 221, 0, 1); */
 
 #ans1 {
   grid-area: ans1;
-  background-color: aqua;
 }
 
 #ans2 {
   grid-area: ans2;
-  background-color: gainsboro;
 }
 
 #ans3 {
   grid-area: ans3;
-  background-color: bisque;
 }
 
 #ans4 {
   grid-area: ans4;
-  background-color: mediumaquamarine;
 }
 
 #feedback {

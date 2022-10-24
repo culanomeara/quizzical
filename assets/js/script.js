@@ -23,10 +23,6 @@
         };
     });
 
-
-
-
-
     //This function runQuiz takes in the argument of quizTopic and then using a switch case,
     //calls the relevant topic question function
     function runQuiz(quizTopic, counter) {
@@ -117,25 +113,6 @@
     }
 
     function endQuiz() {
-        alert("Your score was " + currentScore);
-        /*document.getElementById('trigonometry').classList.remove('disabled');
-        document.getElementById('trigonometry').style.backgroundColor = "";
-        document.getElementById('algebra').classList.remove('disabled');
-        document.getElementById('algebra').style.backgroundColor = "";
-        document.getElementById('geometry').classList.remove('disabled');
-        document.getElementById('geometry').style.backgroundColor = "";
-        document.getElementById('statistics').classList.remove('disabled');
-        document.getElementById('statistics').style.backgroundColor = "";
-        document.getElementById('feedback').style.textContent = "";
-        document.getElementById('ans1').style.backgroundColor = "";
-        document.getElementById('ans2').style.backgroundColor = "";
-        document.getElementById('ans3').style.backgroundColor = "";
-        document.getElementById('ans4').style.backgroundColor = "";
-        document.getElementById('feedback').textContent = "";
-        document.getElementById('question').textContent = "";
-        document.getElementById('qNumber').textContent = "";
-        document.getElementById('qTotal').textContent = "";
-        document.getElementById('score').textContent = "";*/
         location.reload();
         counter = 0;
         currentScore = 0;
