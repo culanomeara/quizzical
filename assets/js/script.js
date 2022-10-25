@@ -1,30 +1,31 @@
-    let counter = 0;
+
     let currentScore = 0;
     let qtopic;
+    let qCounter = 1;
+    let totalQuestion=4;
     const element = document.getElementById("next");
     element.addEventListener("click", nextQ);
-    
+
     //This function runQuiz takes in the argument of quizTopic and then using a switch case,
     //calls the relevant topic question function
-    function runQuiz(quizTopic, counter) {
-        qtopic=quizTopic;
+    function runQuiz(quizTopic) {
+        qtopic = quizTopic;
         disableTopics();
         document.getElementById(qtopic).style.backgroundColor = "orange";
-        displayTrigQuestion(counter);
-        
+        displayTrigQuestion(qCounter);
     }
 
     function nextQ() {
-        counter++;
+        qCounter++;
         enableAnswers();
         currentQtopic = qtopic;
         document.getElementById('feedback').textContent = "";
         if (currentQtopic == "none") {
             alert('Please select a topic for the quiz');
         } else
-        if (counter < 4) {
-            runQuiz(currentQtopic, counter);
-            if (counter === 3) {
+        if (qCounter < 5) {
+            runQuiz(currentQtopic, qCounter);
+            if (qCounter === 4) {
                 document.getElementById('next').innerHTML = 'Finish';
                 document.getElementById('next').id = 'finish';
             }
@@ -48,12 +49,9 @@
         return usertopic;
     };*/
 
-    function displayTrigQuestion(questionNumber) {
-        var i = questionNumber;
-        let qNumber = document.getElementById('qNumber');
-        let qNum = i + 1;
-        qNumber.textContent = "Question Number: " + qNum;
-        document.getElementById('qTotal').textContent = "Total Qs: " + trigonometryQData.length;
+    function displayTrigQuestion(qCounter) {
+        let i = qCounter-1;
+        document.getElementById('qProgress').textContent = `Question ${qCounter} of ${totalQuestion}`;
         document.getElementById('question').textContent = trigonometryQData[i].questiontext;
         document.getElementById('ans1').textContent = trigonometryQData[i].choices[0];
         document.getElementById('ans1').style.backgroundColor = '';
@@ -65,11 +63,9 @@
         document.getElementById('ans4').style.backgroundColor = '';
     }
 
-    function displayAlgebraQuestion(questionNumber) {
-        var i = questionNumber;
-        let qNumber = document.getElementById('qNumber');
+    /*function displayAlgebraQuestion(qCounter) {
+        var i = qu;
         let qNum = i + 1;
-        qNumber.textContent = "Question Number: " + qNum;
         document.getElementById('qTotal').textContent = "Total Qs: " + algebraQData.length;
         document.getElementById('question').textContent = algebraQData[i].questiontext;
         document.getElementById('ans1').textContent = algebraQData[i].choices[0];
@@ -80,21 +76,21 @@
         document.getElementById('ans3').style.backgroundColor = '';
         document.getElementById('ans4').textContent = algebraQData[i].choices[3];
         document.getElementById('ans4').style.backgroundColor = '';
-    }
+    }*/
 
     function checkAnswer(userSelect) {
-
         disableAnswers();
         document.getElementsByClassName('controls')[0].removeAttribute("hidden");
         let correctanswer;
+        let i = qCounter-1;
         let currenttopic = qtopic;
         let userAnswer = document.getElementById(userSelect).textContent;
         let ansColor = document.getElementById(userSelect);
         if (currenttopic == "trigonometry") {
-            correctanswer = trigonometryQData[counter].answer;
+            correctanswer = trigonometryQData[i].answer;
         } else if (
             currenttopic == "algebra") {
-            correctanswer = algebraQData[counter].answer;
+            correctanswer = algebraQData[i].answer;
         };
         if (userAnswer == correctanswer) {
             currentScore++;
@@ -110,8 +106,8 @@
 
     function endQuiz() {
         location.reload();
-        counter = 0;
         currentScore = 0;
+        qCounter = 1;
     }
 
     function disableTopics() {

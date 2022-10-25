@@ -11,7 +11,7 @@ $golden-yellow: rgba(255, 221, 0, 1); */
   align-items: center;
   justify-content: center;
   width: 90%;
-  margin: 2rem auto 10rem auto;
+  margin: 2rem auto 10px auto;
 }
 
 
@@ -36,9 +36,9 @@ $golden-yellow: rgba(255, 221, 0, 1); */
 
 };
 
-.topic {
+/*.topic {
   border-radius: 5px;
-}
+}*/
 
 button {
   cursor: pointer;

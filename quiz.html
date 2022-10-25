@@ -17,16 +17,15 @@
 <body>
     <h1>Let's get Quizzical about Maths</h1>
     <div class="topiccontainer">
-        <div class="topic" id="trigonometry" onclick="runQuiz('trigonometry', 0)">Trigonometry</div>
+        <div class="topic" id="trigonometry" onclick="runQuiz('trigonometry')">Trigonometry</div>
         <div class="topic" id="algebra" onclick="runQuiz('algebra', 0)">Algebra</div>
         <div class="topic" id="geometry" onclick="runQuiz('geometry', 0)">Geometry</div>
         <div class="topic" id="statistics" onclick="runQuiz('statistics', 0)">Statistics</div>
     </div>
     <div class="qcontainer">
-        <div id="question"></div>
-        <div id="qNumber"></div>
-        <div id="qTotal"></div>
+        <div id="qProgress"></div>
         <div id="score"></div>
+        <div id="question"></div>
         <div class="answer" id="ans1" onclick="checkAnswer('ans1')"></div>
         <div class="answer" id="ans2" onclick="checkAnswer('ans2')"></div>
         <div class="answer" id="ans3" onclick="checkAnswer('ans3')"></div>
