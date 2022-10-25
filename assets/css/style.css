@@ -5,46 +5,77 @@ $mikado-yellow: rgba(255, 195, 0, 1);
 $cyber-yellow: rgba(255, 208, 0, 1);
 $golden-yellow: rgba(255, 221, 0, 1); */
 
-.topiccontainer {
+.topicContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 80%;
   margin: 2rem auto 10px auto;
 }
 
+.topicContainer .topic {
+    width: 20%;
+    text-align: center;
+    cursor:pointer;
+};
 
-.qcontainer {
-  /*display: grid;
-  grid-template-areas:
-  'topic1 topic2 topic3 topic4'
-    'qNumber qTotal . score'
-    'question question question question'
-    'ans1 ans2 ans3 ans4'
-    'feedback feedback feedback feedback';
-  gap: 10px;
-  padding: 10px;
-  grid-template-columns: minmax(150px, 25%);
-  grid-template-rows: 50px 50px 50px 50px 50px;*/
+
+.qContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 90%;
     margin: 2rem auto 2rem auto;
-
 };
 
-/*.topic {
-  border-radius: 5px;
-}*/
+
+
+#questionProgress {
+  width: 100%;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#questionProgress #qProgress {
+  width: 45%;
+  text-align: left;
+}
+
+#questionProgress #score {
+  width: 45%;
+  text-align: right;
+}
+.controls {
+  width: 90%;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls button {
+  width: 50%;
+  text-align: center;
+}
 
 button {
   cursor: pointer;
 }
 
-#trigonometry {
+.qContainer .answer {
+  width: 45%;
+  cursor: pointer;
+}
+
+/*#trigonometry {
   grid-area: topic1;
   height: 20px;
   cursor: pointer;
@@ -104,7 +135,7 @@ button {
 
 #feedback {
   grid-area: feedback;
-}
+}*/
 
 h3 {
   color: white;
@@ -127,9 +158,9 @@ h3 {
   pointer-events: none;
 }
 
-@media screen and (max-width: 400px) {
+/*@media screen and (max-width: 400px) {
   .container {
-    display: grid;
+    display: flex;
     grid-template-areas:
       'topic1 topic2'
       'topic3 topic4'
@@ -146,4 +177,4 @@ h3 {
     grid-template-columns: minmax(150px, 20%);
     border-color: black;
   }
-}
+}*/
