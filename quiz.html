@@ -17,6 +17,10 @@
 <body>
     <h1>Let's get Quizzical about Maths</h1>
     <div class="container">
+        <div class="topic" id="trigonometry" onclick="runQuiz('trigonometry', 0)">Trigonometry</div>
+        <div class="topic" id="algebra" onclick="runQuiz('algebra', 0)">Algebra</div>
+        <div class="topic" id="geometry" onclick="runQuiz('geometry', 0)">Geometry</div>
+        <div class="topic" id="statistics" onclick="runQuiz('statistics', 0)">Statistics</div>
         <div id="question"></div>
         <div id="qNumber"></div>
         <div id="qTotal"></div>
@@ -30,7 +34,7 @@
         <!--button id="finish" class="controls">Finish
         </button-->
     </div>
-    <button class="controls" id="next">Next
+    <button class="controls" id="next" hidden>Next
     </button>
     <script src="assets/js/data.js"></script>
     <script src="assets/js/script.js"></script>

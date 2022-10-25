@@ -1,11 +1,23 @@
     let counter = 0;
     let currentScore = 0;
-
+    let qtopic;
     const element = document.getElementById("next");
-    element.addEventListener("click", function () {
+    element.addEventListener("click", nextQ);
+    
+    //This function runQuiz takes in the argument of quizTopic and then using a switch case,
+    //calls the relevant topic question function
+    function runQuiz(quizTopic, counter) {
+        qtopic=quizTopic;
+        disableTopics();
+        document.getElementById(qtopic).style.backgroundColor = "orange";
+        displayTrigQuestion(counter);
+        
+    }
+
+    function nextQ() {
         counter++;
         enableAnswers();
-        currentQtopic = checkTopic();
+        currentQtopic = qtopic;
         document.getElementById('feedback').textContent = "";
         if (currentQtopic == "none") {
             alert('Please select a topic for the quiz');
@@ -21,27 +33,9 @@
             document.getElementById('finish').innerHTML = 'Next';
             document.getElementById('finish').id = 'next';
         };
-    });
+    };
 
-    //This function runQuiz takes in the argument of quizTopic and then using a switch case,
-    //calls the relevant topic question function
-    function runQuiz(quizTopic, counter) {
-        disableTopics();
-        switch (true) {
-            case quizTopic == "trigonometry":
-                displayTrigQuestion(counter);
-                document.getElementById('trigonometry').style.backgroundColor = "orange";
-                break;
-            case quizTopic == "algebra":
-                displayAlgebraQuestion(counter);
-                document.getElementById('algebra').style.backgroundColor = "orange";
-                break;
-            case quizTopic == "geometry":
-                //  displayGeometryQuestion();
-        }
-    }
-
-    function checkTopic() {
+    /*function checkTopic() {
         let usertopic = ("None");
         if (document.getElementById('trigonometry').style.backgroundColor == 'orange') {
             usertopic = "trigonometry";
@@ -52,7 +46,7 @@
             location.reload();
         }
         return usertopic;
-    };
+    };*/
 
     function displayTrigQuestion(questionNumber) {
         var i = questionNumber;
@@ -89,9 +83,11 @@
     }
 
     function checkAnswer(userSelect) {
+
         disableAnswers();
+        document.getElementsByClassName('controls')[0].removeAttribute("hidden");
         let correctanswer;
-        let currenttopic = checkTopic();
+        let currenttopic = qtopic;
         let userAnswer = document.getElementById(userSelect).textContent;
         let ansColor = document.getElementById(userSelect);
         if (currenttopic == "trigonometry") {
@@ -139,7 +135,7 @@
         document.getElementById('ans4').classList.add('disabled');
     }
 
-    var trigonometryQData = [{
+    const trigonometryQData = [{
         topic: "trigonometry",
         questiontext: "What formula can you use to find the length of a side of a right-angled triangle?",
         answer: "Pythagoras' Theorem",
@@ -161,7 +157,7 @@
         choices: ["30", "90", "60", "45"]
     }];
 
-    var algebraQData = [{
+    const algebraQData = [{
         topic: "algebra",
         questiontext: "What does HCF stand for?",
         answer: "Highest Common Factor",
