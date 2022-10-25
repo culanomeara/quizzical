@@ -20,25 +20,33 @@ $golden-yellow: rgba(255, 221, 0, 1); */
   grid-template-rows: 25px 25px 50px 50px 25px;
 };
 
-.qcontainer .topic {
+.topic {
   border-radius: 5px;
+}
+
+button {
+  cursor: pointer;
 }
 
 #trigonometry {
   grid-area: topic1;
   height: 20px;
+  cursor: pointer;
 }
 
 #algebra {
   grid-area: topic2;
+  cursor: pointer;
 }
 
 #geometry {
   grid-area: topic3;
+  cursor: pointer;
 }
 
 #statistics {
   grid-area: topic4;
+  cursor: pointer;
 }
 
 #question {
@@ -60,18 +68,22 @@ $golden-yellow: rgba(255, 221, 0, 1); */
 
 #ans1 {
   grid-area: ans1;
+  cursor: pointer;
 }
 
 #ans2 {
   grid-area: ans2;
+  cursor: pointer;
 }
 
 #ans3 {
   grid-area: ans3;
+  cursor: pointer;
 }
 
 #ans4 {
   grid-area: ans4;
+  cursor: pointer;
 }
 
 #feedback {
