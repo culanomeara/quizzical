@@ -5,19 +5,35 @@ $mikado-yellow: rgba(255, 195, 0, 1);
 $cyber-yellow: rgba(255, 208, 0, 1);
 $golden-yellow: rgba(255, 221, 0, 1); */
 
-.container {
-  display: grid;
+.topiccontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 2rem auto 10rem auto;
+}
+
+
+.qcontainer {
+  /*display: grid;
   grid-template-areas:
   'topic1 topic2 topic3 topic4'
     'qNumber qTotal . score'
     'question question question question'
     'ans1 ans2 ans3 ans4'
     'feedback feedback feedback feedback';
-  row-gap: 10px;
-  column-gap: 5px;
+  gap: 10px;
   padding: 10px;
   grid-template-columns: minmax(150px, 25%);
-  grid-template-rows: 25px 25px 50px 50px 25px;
+  grid-template-rows: 50px 50px 50px 50px 50px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 2rem auto 2rem auto;
+
 };
 
 .topic {
