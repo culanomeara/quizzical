@@ -17,25 +17,26 @@
 <body>
     <h1>Let's get Quizzical about Maths</h1>
     <div class="topicContainer">
-        <p class="topic" id="trigonometry" onclick="runQuiz('trigonometry')">Trigonometry</p>
-        <p class="topic" id="algebra" onclick="runQuiz('algebra', 0)">Algebra</p>
-        <p class="topic" id="geometry" onclick="runQuiz('geometry', 0)">Geometry</p>
-        <p class="topic" id="statistics" onclick="runQuiz('statistics', 0)">Statistics</p>
+        <div class="topic" id="trigonometry" onclick="runQuiz('trigonometry')">Trigonometry</div>
+        <div class="topic" id="algebra" onclick="runQuiz('algebra', 0)">Algebra</div>
+        <div class="topic" id="geometry" onclick="runQuiz('geometry', 0)">Geometry</div>
+        <div class="topic" id="statistics" onclick="runQuiz('statistics', 0)">Statistics</div>
     </div>
     <div id="questionProgress">
         <span id="qProgress"></span><span id="score"></span>
     </div>
     <div class="qContainer">
-        <p id="question"></p>
+        <div id="question"></div>
         
-        <p class="answer" id="ans1" onclick="checkAnswer('ans1')"></p>
-        <p class="answer" id="ans2" onclick="checkAnswer('ans2')"></p>
-        <p class="answer" id="ans3" onclick="checkAnswer('ans3')"></p>
-        <p class="answer" id="ans4" onclick="checkAnswer('ans4')"></p>
+        <div class="answer" id="ans1" onclick="checkAnswer('ans1')"></div>
+        <div class="answer" id="ans2" onclick="checkAnswer('ans2')"></div>
+        <div class="answer" id="ans3" onclick="checkAnswer('ans3')"></div>
+        <div class="answer" id="ans4" onclick="checkAnswer('ans4')"></div>
+        <div id="feedback">  </div>
     </div>
     
 
-    <p id="feedback"></p>
+    
     <div class="controls">
         <button class="controlButton" id="next">Next
         </button>

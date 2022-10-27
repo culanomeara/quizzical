@@ -12,7 +12,7 @@ resetQuiz.addEventListener("click", endQuiz);
 function runQuiz(quizTopic) {
     qtopic = quizTopic;
     disableTopics();
-    document.getElementById(qtopic).style.backgroundColor = "orange";
+    document.getElementById(qtopic).style.backgroundColor = "pink";
     displayQuestion(qCounter);
 }
 
