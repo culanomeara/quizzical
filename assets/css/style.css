@@ -6,8 +6,29 @@ $cyber-yellow: rgba(255, 208, 0, 1);
 $golden-yellow: rgba(255, 221, 0, 1); */
 
 body {
+  text-align: center;
   color: blue;
 }
+
+#welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin: 0.5rem auto 0.5rem auto;
+}
+
+#start {
+  width: 60%;
+  border: 3px solid blue;
+  outline: 3px solid violet;
+}
+
+#start:hover {
+  cursor: pointer;
+}
+
 .topicContainer {
   display: flex;
   flex-direction: row;
@@ -49,7 +70,7 @@ body {
   cursor: pointer;
   border: 3px solid blue;
   outline: 3px solid violet;
-  background-color:rgba(255, 192, 203, 0.5);
+  background-color: rgba(255, 192, 203, 0.5);
 }
 
 .qContainer .answer {
@@ -79,7 +100,7 @@ body {
   cursor: pointer;
   border: 3px solid violet;
   outline: 3px solid blue;
-  background-color:rgba(255, 192, 203, 0.5);
+  background-color: rgba(255, 192, 203, 0.5);
 }
 
 #questionProgress #qProgress {
@@ -102,7 +123,7 @@ body {
   cursor: pointer;
   border: 3px solid blue;
   outline: 3px solid violet;
-  background-color:rgba(255, 192, 203, 0.5);
+  background-color: rgba(255, 192, 203, 0.5);
 }
 
 .controls {
@@ -137,7 +158,7 @@ h1 {
 
 .answer:hover,
 .topic:hover {
-  background-color:rgba(255, 192, 203, 0.5);
+  background-color: rgba(255, 192, 203, 0.5);
 }
 
 .disabled {
