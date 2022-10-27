@@ -2,19 +2,27 @@ let currentScore = 0;
 let qtopic;
 let qCounter = 1;
 let totalQuestion = 4;
-const element = document.getElementById("next");
-element.addEventListener("click", nextQ);
-const resetQuiz = document.getElementById("reset");
-resetQuiz.addEventListener("click", endQuiz);
+
+if (window.location.href.indexOf("index.html") > -1 ) {
+    document.getElementById("start").addEventListener("click", start);
+}
+
+function start() {
+        location.href = "quiz.html";
+    };
 
 //This function runQuiz takes in the argument of quizTopic and then using a switch case,
 //calls the relevant topic question function
 function runQuiz(quizTopic) {
-    qtopic = quizTopic;
+    let element = document.getElementById("next");
+    element.addEventListener("click", nextQ);
+    let resetQuiz = document.getElementById("reset");
+    resetQuiz.addEventListener("click", endQuiz);
     document.getElementById('quizContainer').hidden = false;
     disableTopics();
+    qtopic=quizTopic;
     document.getElementById(qtopic).style.backgroundColor = "rgba(255, 192, 203, 0.5)";
-    displayQuestion(qCounter);
+    displayQuestion(qtopic, qCounter);
 }
 
 function nextQ() {
@@ -35,24 +43,25 @@ function nextQ() {
         }
     } else {
         document.getElementById('finish').hidden = true;
-       document.getElementById('finish').innerHTML = 'Next';
-       document.getElementById('finish').id = 'next';
-       endQuiz(currentScore);
+        document.getElementById('finish').innerHTML = 'Next';
+        document.getElementById('finish').id = 'next';
+        endQuiz(currentScore);
     };
 
 };
 
-function displayQuestion(qCounter) {
+function displayQuestion(qtopic, qCounter) {
     let i = qCounter - 1;
+    let qtopicdata = eval(qtopic.concat("QData"));
     document.getElementById('qProgress').textContent = `Question ${qCounter} of ${totalQuestion}`;
-    document.getElementById('question').textContent = trigonometryQData[i].questiontext;
-    document.getElementById('ans1').textContent = trigonometryQData[i].choices[0];
+    document.getElementById('question').textContent = qtopicdata[i].questiontext;
+    document.getElementById('ans1').textContent = qtopicdata[i].choices[0];
     document.getElementById('ans1').style.backgroundColor = '';
-    document.getElementById('ans2').textContent = trigonometryQData[i].choices[1];
+    document.getElementById('ans2').textContent = qtopicdata[i].choices[1];
     document.getElementById('ans2').style.backgroundColor = '';
-    document.getElementById('ans3').textContent = trigonometryQData[i].choices[2];
+    document.getElementById('ans3').textContent = qtopicdata[i].choices[2];
     document.getElementById('ans3').style.backgroundColor = '';
-    document.getElementById('ans4').textContent = trigonometryQData[i].choices[3];
+    document.getElementById('ans4').textContent = qtopicdata[i].choices[3];
     document.getElementById('ans4').style.backgroundColor = '';
 }
 
@@ -65,15 +74,11 @@ function checkAnswer(userSelect) {
     };
     let correctanswer;
     let i = qCounter - 1;
-    let currenttopic = qtopic;
     let userAnswer = document.getElementById(userSelect).textContent;
     let ansColor = document.getElementById(userSelect);
-    if (currenttopic == "trigonometry") {
-        correctanswer = trigonometryQData[i].answer;
-    } else if (
-        currenttopic == "algebra") {
-        correctanswer = algebraQData[i].answer;
-    };
+    let qtopicdata = eval(qtopic.concat("QData"));
+    correctanswer = qtopicdata[i].answer;
+
     if (userAnswer == correctanswer) {
         currentScore++;
         document.getElementById('feedback').textContent = "Well done!";
@@ -114,46 +119,3 @@ function disableAnswers() {
     document.getElementById('ans4').classList.add('disabled');
 }
 
-const trigonometryQData = [{
-    topic: "trigonometry",
-    questiontext: "What formula can you use to find the length of a side of a right-angled triangle?",
-    answer: "Pythagoras' Theorem",
-    choices: ["Sine Rule", "Area of a triangle", "Cosine Rule", "Pythagoras' Theorem"]
-}, {
-    topic: "trigonometry",
-    questiontext: "What method can you use to find the angle in a right-angled triangle?",
-    answer: "SOHCAHTOA",
-    choices: ["Pythagoras' Theorem", "SOHCAHTOA", "Area of a triangle", "Cosine Rule"]
-}, {
-    topic: "trigonometry",
-    questiontext: "If the Sine Value of an angle is positive, which two quadrants will the angles be located?",
-    answer: "1st and 2nd",
-    choices: ["1st and 2nd", "1st and 3rd", "1st and 4th", "1st Only"]
-}, {
-    topic: "trigonometry",
-    questiontext: "What angle betwen 0 and 90 degrees has the same Sine and Cosine value?",
-    answer: "30",
-    choices: ["30", "90", "60", "45"]
-}];
-
-const algebraQData = [{
-    topic: "algebra",
-    questiontext: "What does HCF stand for?",
-    answer: "Highest Common Factor",
-    choices: ["Hypothetical Common Fact", "Highest Cumulative Form", "Highest Common Factor", "Hypotenuse Change Face"]
-}, {
-    topic: "algebra",
-    questiontext: "The order of operations in Maths is? ",
-    answer: "BIRDMAS",
-    choices: ["BIRDMAS", "Multiply, Divide, Add, Subtract", "What you need to type into calculator", "As they appear on the page"]
-}, {
-    topic: "algebra",
-    questiontext: "The -b formula is use to find what?",
-    answer: "Roots of a quadratic",
-    choices: ["Length of a line segment", "Factors", "The square root of a number", "Roots of a quadratic"]
-}, {
-    topic: "algebra",
-    questiontext: "If you divide any number by 0, what answer do you get?",
-    answer: "Cannot divide a number by 0",
-    choices: ["Cannot divide a number by 0", "0", "1", "the number"]
-}];
