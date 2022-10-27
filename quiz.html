@@ -22,27 +22,25 @@
         <div class="topic" id="geometry" onclick="runQuiz('geometry', 0)">Geometry</div>
         <div class="topic" id="statistics" onclick="runQuiz('statistics', 0)">Statistics</div>
     </div>
-    <div id="questionProgress">
-        <span id="qProgress"></span><span id="score"></span>
-    </div>
-    <div class="qContainer">
-        <div id="question"></div>
-        
-        <div class="answer" id="ans1" onclick="checkAnswer('ans1')"></div>
-        <div class="answer" id="ans2" onclick="checkAnswer('ans2')"></div>
-        <div class="answer" id="ans3" onclick="checkAnswer('ans3')"></div>
-        <div class="answer" id="ans4" onclick="checkAnswer('ans4')"></div>
-        <div id="feedback">  </div>
-    </div>
-    
+    <div id="quizContainer" hidden>
+        <div id="questionProgress">
+            <span id="qProgress"></span><span id="score"></span>
+        </div>
+        <div class="qContainer">
+            <div id="question"></div>
 
-    
-    <div class="controls">
-        <button class="controlButton" id="next">Next
-        </button>
-        <!--div class="controlButton"-->
-        <button class="controlButton" id="reset">Reset
-        </button>
+            <div class="answer" id="ans1" onclick="checkAnswer('ans1')"></div>
+            <div class="answer" id="ans2" onclick="checkAnswer('ans2')"></div>
+            <div class="answer" id="ans3" onclick="checkAnswer('ans3')"></div>
+            <div class="answer" id="ans4" onclick="checkAnswer('ans4')"></div>
+            <div id="feedback"> </div>
+        </div>
+        <div class="controls">
+            <button class="controlButton" id="next" hidden>Next
+            </button>
+            <button class="controlButton" id="reset">Reset
+            </button>
+        </div>
     </div>
 
 

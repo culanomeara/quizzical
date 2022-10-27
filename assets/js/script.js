@@ -11,6 +11,7 @@ resetQuiz.addEventListener("click", endQuiz);
 //calls the relevant topic question function
 function runQuiz(quizTopic) {
     qtopic = quizTopic;
+    document.getElementById('quizContainer').removeAttribute('hidden');
     disableTopics();
     document.getElementById(qtopic).style.backgroundColor = "rgba(255, 192, 203, 0.5)";
     displayQuestion(qCounter);
@@ -21,6 +22,7 @@ function nextQ() {
     enableAnswers();
     currentQtopic = qtopic;
     document.getElementById('feedback').textContent = "";
+    document.getElementById('next').hidden=true;
     if (currentQtopic == "none") {
         alert('Please select a topic for the quiz');
     } else
@@ -36,19 +38,6 @@ function nextQ() {
         document.getElementById('finish').id = 'next';
     };
 };
-
-/*function checkTopic() {
-    let usertopic = ("None");
-    if (document.getElementById('trigonometry').style.backgroundColor == 'orange') {
-        usertopic = "trigonometry";
-    } else if (document.getElementById('algebra').style.backgroundColor == 'orange') {
-        usertopic = "algebra";
-    } else {
-        alert('Please select a topic');
-        location.reload();
-    }
-    return usertopic;
-};*/
 
 function displayQuestion(qCounter) {
     let i = qCounter - 1;
@@ -81,7 +70,7 @@ function displayQuestion(qCounter) {
 
 function checkAnswer(userSelect) {
     disableAnswers();
-    document.getElementsByClassName('controls')[0].removeAttribute("hidden");
+    document.getElementById('next').hidden=false;
     let correctanswer;
     let i = qCounter - 1;
     let currenttopic = qtopic;
@@ -109,6 +98,7 @@ function endQuiz() {
     location.reload();
     currentScore = 0;
     qCounter = 1;
+    document.getElementById('quizContainer').addAttribute(hidden);
 }
 
 function disableTopics() {
