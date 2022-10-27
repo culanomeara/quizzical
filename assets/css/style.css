@@ -5,10 +5,10 @@ $mikado-yellow: rgba(255, 195, 0, 1);
 $cyber-yellow: rgba(255, 208, 0, 1);
 $golden-yellow: rgba(255, 221, 0, 1); */
 
-body {
+/*body {
   text-align: center;
   color: blue;
-}
+}*/
 
 #welcome {
   display: flex;
@@ -67,7 +67,6 @@ body {
   font-weight: 600;
   margin: 0.5rem auto;
   padding: .5rem .5rem;
-  cursor: pointer;
   border: 3px solid blue;
   outline: 3px solid violet;
   background-color: rgba(255, 192, 203, 0.5);
@@ -75,7 +74,6 @@ body {
 
 .qContainer .answer {
   width: 40%;
-  height: 15px;
   text-align: center;
   border-radius: .5rem;
   font-weight: 600;
@@ -97,7 +95,6 @@ body {
   font-weight: 600;
   margin: 1rem auto;
   padding: .5rem .5rem;
-  cursor: pointer;
   border: 3px solid violet;
   outline: 3px solid blue;
   background-color: rgba(255, 192, 203, 0.5);
@@ -120,7 +117,6 @@ body {
   font-weight: 600;
   margin: 1rem auto;
   padding: .5rem .5rem;
-  cursor: pointer;
   border: 3px solid blue;
   outline: 3px solid violet;
   background-color: rgba(255, 192, 203, 0.5);
@@ -159,6 +155,7 @@ h1 {
 .answer:hover,
 .topic:hover {
   background-color: rgba(255, 192, 203, 0.5);
+  transform: scale(0.95);
 }
 
 .disabled {

@@ -3,14 +3,6 @@ let qtopic;
 let qCounter = 1;
 let totalQuestion = 4;
 
-if (window.location.href.indexOf("index.html") > -1 ) {
-    document.getElementById("start").addEventListener("click", start);
-}
-
-function start() {
-        location.href = "quiz.html";
-    };
-
 //This function runQuiz takes in the argument of quizTopic and then using a switch case,
 //calls the relevant topic question function
 function runQuiz(quizTopic) {
