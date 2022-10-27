@@ -5,10 +5,9 @@ $mikado-yellow: rgba(255, 195, 0, 1);
 $cyber-yellow: rgba(255, 208, 0, 1);
 $golden-yellow: rgba(255, 221, 0, 1); */
 
-/*body {
-  text-align: center;
-  color: blue;
-}*/
+body {
+  font-size: 3vw;
+}
 
 #welcome {
   display: flex;
@@ -31,6 +30,8 @@ $golden-yellow: rgba(255, 221, 0, 1); */
 
 .topicContainer {
   display: flex;
+  flex-wrap: wrap;
+  
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -85,16 +86,15 @@ $golden-yellow: rgba(255, 221, 0, 1); */
 }
 
 #questionProgress {
-  width: 40%;
-  height: 15px;
+  width: 60%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   border-radius: .5rem;
   font-weight: 600;
-  margin: 1rem auto;
-  padding: .5rem .5rem;
+  margin: 0.5rem auto;
+  padding: .25rem .25rem;
   border: 3px solid violet;
   outline: 3px solid blue;
   background-color: rgba(255, 192, 203, 0.5);
@@ -106,7 +106,7 @@ $golden-yellow: rgba(255, 221, 0, 1); */
 }
 
 #questionProgress #score {
-  width: 40%;
+  width: 20%;
   text-align: right;
 }
 
@@ -123,24 +123,24 @@ $golden-yellow: rgba(255, 221, 0, 1); */
 }
 
 .controls {
-  width: 40%;
-  margin: 1rem auto;
+  width: 80%;
+  margin: 0.5rem auto;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: center;
   justify-content: space-between;
 }
 
 .controls button {
-  width: 30%;
+  width: 40%;
   text-align: center;
 }
 
 button {
   cursor: pointer;
   border-radius: .5rem;
-  font-weight: 600;
+  font-weight: 400;
   margin: 0.5rem auto;
   padding: .25rem .25rem;
   border: 3px solid blue;
@@ -162,23 +162,13 @@ h1 {
   pointer-events: none;
 }
 
-/*@media screen and (max-width: 400px) {
-  .container {
+/*@media screen and (max-width: 500px) {
+  .topicContainer {
     display: flex;
-    grid-template-areas:
-      'topic1 topic2'
-      'topic3 topic4'
-      'qNumber qTotal'
-      'score score'
-      'question question'
-      'ans1 ans2'
-      'ans3 ans4'
-      'feedback feedback';
-    gap: 5px;
-
-    background-color: rgba(255, 170, 0, 0.5);
-    padding: 5px;
-    grid-template-columns: minmax(150px, 20%);
-    border-color: black;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: 0.1rem auto 0.1rem auto;
   }
 }*/
