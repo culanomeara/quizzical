@@ -11,7 +11,7 @@ resetQuiz.addEventListener("click", endQuiz);
 //calls the relevant topic question function
 function runQuiz(quizTopic) {
     qtopic = quizTopic;
-    document.getElementById('quizContainer').removeAttribute('hidden');
+    document.getElementById('quizContainer').hidden = false;
     disableTopics();
     document.getElementById(qtopic).style.backgroundColor = "rgba(255, 192, 203, 0.5)";
     displayQuestion(qCounter);
@@ -22,21 +22,24 @@ function nextQ() {
     enableAnswers();
     currentQtopic = qtopic;
     document.getElementById('feedback').textContent = "";
-    document.getElementById('next').hidden=true;
     if (currentQtopic == "none") {
         alert('Please select a topic for the quiz');
     } else
     if (qCounter < 5) {
         runQuiz(currentQtopic, qCounter);
+        document.getElementById('next').hidden = true;
         if (qCounter === 4) {
             document.getElementById('next').innerHTML = 'Finish';
             document.getElementById('next').id = 'finish';
+            document.getElementById('finish').hidden = true;
         }
     } else {
-        endQuiz(currentScore);
-        document.getElementById('finish').innerHTML = 'Next';
-        document.getElementById('finish').id = 'next';
+        document.getElementById('finish').hidden = true;
+       document.getElementById('finish').innerHTML = 'Next';
+       document.getElementById('finish').id = 'next';
+       endQuiz(currentScore);
     };
+
 };
 
 function displayQuestion(qCounter) {
@@ -53,24 +56,13 @@ function displayQuestion(qCounter) {
     document.getElementById('ans4').style.backgroundColor = '';
 }
 
-/*function displayAlgebraQuestion(qCounter) {
-    var i = qu;
-    let qNum = i + 1;
-    document.getElementById('qTotal').textContent = "Total Qs: " + algebraQData.length;
-    document.getElementById('question').textContent = algebraQData[i].questiontext;
-    document.getElementById('ans1').textContent = algebraQData[i].choices[0];
-    document.getElementById('ans1').style.backgroundColor = '';
-    document.getElementById('ans2').textContent = algebraQData[i].choices[1];
-    document.getElementById('ans2').style.backgroundColor = '';
-    document.getElementById('ans3').textContent = algebraQData[i].choices[2];
-    document.getElementById('ans3').style.backgroundColor = '';
-    document.getElementById('ans4').textContent = algebraQData[i].choices[3];
-    document.getElementById('ans4').style.backgroundColor = '';
-}*/
-
 function checkAnswer(userSelect) {
     disableAnswers();
-    document.getElementById('next').hidden=false;
+    if (document.getElementById('next') == null) {
+        document.getElementById('finish').hidden = false;
+    } else {
+        document.getElementById('next').hidden = false;
+    };
     let correctanswer;
     let i = qCounter - 1;
     let currenttopic = qtopic;
@@ -95,10 +87,10 @@ function checkAnswer(userSelect) {
 }
 
 function endQuiz() {
-    location.reload();
     currentScore = 0;
     qCounter = 1;
-    document.getElementById('quizContainer').addAttribute(hidden);
+    document.getElementById('quizContainer').hidden = true;
+    location.reload();
 }
 
 function disableTopics() {
