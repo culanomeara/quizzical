@@ -6,7 +6,8 @@ $cyber-yellow: rgba(255, 208, 0, 1);
 $golden-yellow: rgba(255, 221, 0, 1); */
 
 body {
-  font-size: 3vw;
+  text-align: center;
+  color: blue;
 }
 
 #welcome {
@@ -14,38 +15,34 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 60%;
+  width: 80%;
   margin: 0.5rem auto 0.5rem auto;
 }
 
 #start {
-  width: 60%;
+  width: 80%;
+  border-radius: .5rem;
   border: 3px solid blue;
   outline: 3px solid violet;
 }
 
-#start:hover {
-  cursor: pointer;
-}
-
-.topicContainer {
+.topicContainer,
+#questionProgress, .controls {
   display: flex;
   flex-wrap: wrap;
-  
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 60%;
+  width: 80%;
   margin: 0.5rem auto 0.5rem auto;
 }
 
 .topicContainer .topic {
-  width: 0.25fr;
-  min-width: 100px;
+  width: 20%;
   text-align: center;
   border-radius: .5rem;
   font-weight: 600;
-  margin: 0.5rem;
+  margin: 0.5rem auto;
   padding: .25rem .25rem;
   cursor: pointer;
   border: 3px solid blue;
@@ -57,79 +54,40 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   margin: 0.5rem auto 0.5rem auto;
 }
 
-.qContainer #question {
-  width: 60%;
-  text-align: center;
-  border-radius: .5rem;
-  font-weight: 600;
-  margin: 0.5rem auto;
-  padding: .5rem .5rem;
-  border: 3px solid blue;
-  outline: 3px solid violet;
-  background-color: rgba(255, 192, 203, 0.5);
-}
-
-.qContainer .answer {
-  width: 40%;
+#question,
+.answer,
+#feedback, #questionProgress {
+  width: 80%;
   text-align: center;
   border-radius: .5rem;
   font-weight: 600;
   margin: 0.5rem auto;
   padding: .25rem .25rem;
-  cursor: pointer;
-  border: 2px solid blue;
-  outline: 2px solid violet;
+  border: 3px solid blue;
+  outline: 3px solid violet;
+
+}
+
+.qContainer #question,
+#feedback,
+#questionProgress {
+  background-color: rgba(255, 192, 203, 0.5);
 }
 
 #questionProgress {
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  border-radius: .5rem;
-  font-weight: 600;
-  margin: 0.5rem auto;
-  padding: .25rem .25rem;
-  border: 3px solid violet;
-  outline: 3px solid blue;
-  background-color: rgba(255, 192, 203, 0.5);
 }
 
 #questionProgress #qProgress {
-  width: 40%;
   text-align: left;
 }
 
 #questionProgress #score {
-  width: 20%;
   text-align: right;
-}
-
-#feedback {
-  width: 40%;
-  text-align: center;
-  border-radius: .5rem;
-  font-weight: 600;
-  margin: 1rem auto;
-  padding: .5rem .5rem;
-  border: 3px solid blue;
-  outline: 3px solid violet;
-  background-color: rgba(255, 192, 203, 0.5);
-}
-
-.controls {
-  width: 80%;
-  margin: 0.5rem auto;
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .controls button {
@@ -140,7 +98,7 @@ body {
 button {
   cursor: pointer;
   border-radius: .5rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0.5rem auto;
   padding: .25rem .25rem;
   border: 3px solid blue;
@@ -153,9 +111,11 @@ h1 {
 }
 
 .answer:hover,
-.topic:hover {
+.topic:hover,
+#start:hover, button:hover {
   background-color: rgba(255, 192, 203, 0.5);
   transform: scale(0.95);
+  cursor: pointer;
 }
 
 .disabled {
