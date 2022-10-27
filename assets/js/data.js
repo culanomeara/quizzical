@@ -57,19 +57,19 @@ const geometryQData = [{
 }];
 
 const statisticsQData = [{
-    questiontext: "SSSWhat does HCF stand for?",
-    answer: "Highest Common Factor",
-    choices: ["Hypothetical Common Fact", "Highest Cumulative Form", "Highest Common Factor", "Hypotenuse Change Face"]
+    questiontext: "What type of data would CAR BRANDS be?",
+    answer: "Categorical Nominal",
+    choices: ["Categorical Nominal", "Categorical Ordinal", "Numerical Discrete", "Numerical Continuous"]
 }, {
-    questiontext: "The order of operations in Maths is? ",
-    answer: "BIRDMAS",
-    choices: ["BIRDMAS", "Multiply, Divide, Add, Subtract", "What you need to type into calculator", "As they appear on the page"]
+    questiontext: "For a survey to be unbiased, you have to do what?",
+    answer: "Ensure everyone has an equal chance of being surveyed",
+    choices: ["Ask as many different people as possible", "Go up to people you see in the street", "Put the survey up online", "Ensure everyone has an equal chance of being surveyed"]
 }, {
-    questiontext: "The -b formula is use to find what?",
-    answer: "Roots of a quadratic",
-    choices: ["Length of a line segment", "Factors", "The square root of a number", "Roots of a quadratic"]
+    questiontext: "Which of the three averages would be used with categorical data?",
+    answer: "Mode",
+    choices: ["Mode", "Mean", "Median", "Any of the above"]
 }, {
-    questiontext: "If you divide any number by 0, what answer do you get?",
-    answer: "Cannot divide a number by 0",
-    choices: ["Cannot divide a number by 0", "0", "1", "the number"]
+    questiontext: "Which of the following methods are used to collect data?",
+    answer: "All of the above",
+    choices: ["A questionnaire", "An online poll", "A class survey", "All of the above"]
 }];
