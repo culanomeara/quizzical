@@ -12,7 +12,7 @@ resetQuiz.addEventListener("click", endQuiz);
 function runQuiz(quizTopic) {
     qtopic = quizTopic;
     disableTopics();
-    document.getElementById(qtopic).style.backgroundColor = "pink";
+    document.getElementById(qtopic).style.backgroundColor = "rgba(255, 192, 203, 0.5)";
     displayQuestion(qCounter);
 }
 
@@ -96,11 +96,11 @@ function checkAnswer(userSelect) {
     if (userAnswer == correctanswer) {
         currentScore++;
         document.getElementById('feedback').textContent = "Well done!";
-        ansColor.style.backgroundColor = "green";
+        ansColor.style.backgroundColor = "rgba(0, 255, 0, 0.5)";
 
     } else {
         document.getElementById('feedback').textContent = `Oops! The correct answer is ${correctanswer}`;
-        ansColor.style.backgroundColor = "red";
+        ansColor.style.backgroundColor = "rgba(255, 0, 0, 0.5)";
     }
     document.getElementById('score').textContent = `Score: ${currentScore}`;
 }
