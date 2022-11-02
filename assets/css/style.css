@@ -69,7 +69,7 @@ body {
 
 /* Styling for topic display and progress bar area */
 #currentTopic,
-#questionProgress {
+#questionProgress, #grade, #report {
   width: 60%;
   text-align: center;
   font-weight: 800;
@@ -151,6 +151,17 @@ button {
 h1 {
   text-align: center;
   font-size: x-large;
+}
+
+#report {
+  background-color: rgba(255, 192, 203, 0.5);
+  padding: 0.5rem 0.25rem;
+  font-size: medium;
+}
+
+#grade {
+  padding: 0.5rem 0.25rem;
+  font-size: medium;
 }
 
 /* When user hovers over these areas, apply styling */
