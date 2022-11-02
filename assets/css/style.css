@@ -1,8 +1,14 @@
+/* Google font import */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+/*  General body styles */
 body {
   text-align: center;
   color: blue;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
+/* Styling for welcome blurb on homepage */
 #welcome {
   display: flex;
   flex-direction: column;
@@ -12,13 +18,20 @@ body {
   margin: 0.5rem auto 0.5rem auto;
 }
 
+/* Styling for start button on homepage */
 #start {
-  width: 80%;
+  width: 50%;
   border-radius: .5rem;
   border: 3px solid blue;
   outline: 3px solid violet;
+  font-weight: 800;
+  font-size: x-large;
+  height: 30px;
+  margin: 0.5rem auto 0.5rem auto;
+  padding: 20px;
 }
 
+/* Set up flex boxes for Topic section, control buttons and progress info bar */
 .topicContainer,
 #questionProgress,
 .controls {
@@ -27,13 +40,13 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 60%;
   margin: 0.5rem auto 0.5rem auto;
 }
 
+/* Styling for Topic class */
 .topicContainer .topic {
-  width: 20%;
-  min-width: 102px;
+  min-width: 250px;
   text-align: center;
   border-radius: .5rem;
   font-weight: 600;
@@ -44,6 +57,7 @@ body {
   outline: 3px solid violet;
 }
 
+/* Styling for question area container */
 .qContainer {
   display: flex;
   flex-direction: column;
@@ -53,6 +67,7 @@ body {
   margin: 0.5rem auto 0.5rem auto;
 }
 
+/* Styling for topic display and progress bar area */
 #currentTopic,
 #questionProgress {
   width: 60%;
@@ -61,10 +76,16 @@ body {
   font-weight: 800;
   border: 3px solid blue;
   margin: 0.5rem auto;
-  padding: .25rem .25rem;
+  padding: 1rem 1rem;
   border-radius: .5rem;
 }
 
+/* Highlight bg color for topic display */
+#currentTopic {
+  background-color: rgba(255, 192, 203, 0.5);
+}
+
+/* styling for question text div and feedback div */
 #question,
 #feedback {
   width: 80%;
@@ -73,13 +94,18 @@ body {
   font-weight: 800;
   margin: 0.5rem auto;
   padding: .25rem .25rem;
-  background-color: blue;
-  color: pink;
-  border-radius: .5rem;
+  color: blue;
 }
 
+/* give question text div a border */
+#question {
+  border-radius: .5rem;
+  border: 3px solid blue;
+}
+
+/* styling for answer divs */
 .answer {
-  width: 80%;
+  width: 60%;
   text-align: center;
   border-radius: .5rem;
   font-weight: 600;
@@ -88,13 +114,7 @@ body {
   border: 3px solid blue;
   outline: 3px solid violet;
 }
-
-/*.qContainer #question,
-#feedback,
-#questionProgress {
-  background-color: rgba(255, 192, 203, 0.5);
-}*/
-
+/* style the progress bar area */
 #questionProgress {
   justify-content: space-between;
 }
@@ -107,6 +127,7 @@ body {
   text-align: right;
 }
 
+/* style the control area and buttons */
 .controls button {
   width: 40%;
   text-align: center;
@@ -116,6 +137,8 @@ button {
   cursor: pointer;
   border-radius: .5rem;
   font-weight: 600;
+  font-family: inherit;
+  color: inherit;
   margin: 0.5rem auto;
   padding: .25rem .25rem;
   border: 3px solid blue;
@@ -123,10 +146,12 @@ button {
   background-color: white;
 }
 
+/* h1 styling */
 h1 {
   text-align: center;
 }
 
+/* When user hovers over these areas, apply styling */
 .answer:hover,
 .topic:hover,
 #start:hover,
@@ -136,6 +161,7 @@ button:hover {
   cursor: pointer;
 }
 
+/* prevent user from clicking another answer once answer chosen */
 .disabled {
   pointer-events: none;
 }
