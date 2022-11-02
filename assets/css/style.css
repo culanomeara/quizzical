@@ -20,7 +20,8 @@ body {
 }
 
 .topicContainer,
-#questionProgress, .controls {
+#questionProgress,
+.controls {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -32,6 +33,7 @@ body {
 
 .topicContainer .topic {
   width: 20%;
+  min-width: 102px;
   text-align: center;
   border-radius: .5rem;
   font-weight: 600;
@@ -51,9 +53,32 @@ body {
   margin: 0.5rem auto 0.5rem auto;
 }
 
+#currentTopic,
+#questionProgress {
+  width: 60%;
+  font-size: large;
+  text-align: center;
+  font-weight: 800;
+  border: 3px solid blue;
+  margin: 0.5rem auto;
+  padding: .25rem .25rem;
+  border-radius: .5rem;
+}
+
 #question,
-.answer,
-#feedback, #questionProgress {
+#feedback {
+  width: 80%;
+  font-size: large;
+  text-align: center;
+  font-weight: 800;
+  margin: 0.5rem auto;
+  padding: .25rem .25rem;
+  background-color: blue;
+  color: pink;
+  border-radius: .5rem;
+}
+
+.answer {
   width: 80%;
   text-align: center;
   border-radius: .5rem;
@@ -62,14 +87,13 @@ body {
   padding: .25rem .25rem;
   border: 3px solid blue;
   outline: 3px solid violet;
-
 }
 
-.qContainer #question,
+/*.qContainer #question,
 #feedback,
 #questionProgress {
   background-color: rgba(255, 192, 203, 0.5);
-}
+}*/
 
 #questionProgress {
   justify-content: space-between;
@@ -105,7 +129,8 @@ h1 {
 
 .answer:hover,
 .topic:hover,
-#start:hover, button:hover {
+#start:hover,
+button:hover {
   background-color: rgba(255, 192, 203, 0.5);
   transform: scale(0.95);
   cursor: pointer;
