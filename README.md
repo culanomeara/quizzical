@@ -2,43 +2,37 @@
 
 This site is aimed at Junior Cycle students looking to revise Mathematics topics. It gives students four topics to choose from. Each topic contains a set number of multiple choice questions and feedback is given after each question. Users then receive at Report Card when the quiz is complete.
 
-## Table of Contents
-* ### [Deployed Site](#deployed-site)
-* ### [Demo](#am-i-responsive)
-* ### [UX](#user-experience)
-* ### [Design](#design-features)
-* ### [Features](#functional-features)
-* ### [Technologies](#technologies-used)
-* ### [Testing](#application-testing)
-* ### [Deployment](#deploying-the-site)
-* ### [Reflection](#project-reflection)
-* ### [Further Development](#further-development-scope)
-* ### [Credits](#project-credits)
+## Deployed Website
+By clicking [here](https://culanomeara.github.io/quizzical), you can access the final Quizzical deployed site hosted on GitHub Pages.
 
-# <a id="deployed-site"></a>[**Deployed Website**](https://culanomeara.github.io/quizzical)
-By clicking the hyperlinked header above, you can access the final Quizzical deployed site hosted on GitHub Pages.
-
-# <a id="am-i-responsive"> **Responsiveness**
-## [Am I Responsive?](http://ami.responsivedesign.is/)
-Below you can see an image of the final site in the Am I Responsive tool which shows the fantastic level of responsivity of the site to a number of viewports. Attached the above header is a link to the Am I Responsive tool; should you wish to use it yourself.  
-![Survive-Am-I-Responsive-Image](assets/images/survive-am-i-responsive.PNG)
+## Responsiveness
+Below you can see a screenshot of the deployed site in the Am I Responsive tool which shows the responsiveness of the site to a number of viewports. Attached the above header is a link to the Am I Responsive tool.  
+![Quizzical-Am-I-Responsive-Image](assets/images/amiresponsivequizzical.png)
 
 ## User Interface - User Experience
+### **User Stories**
+Below are the user stories that needed to be fulfilled for the project to be successful from the perspective of the user:
+* To discover the Quizzical site and understand the purpose of it.
+* To be able to move through the site with ease on the first visit.
+* To see their progress as they move thru the quiz questions.
+* To be provided with feedback on how they performed.
+* To be able to play again.
 
+### **User Interface**
+- The User interface is intentionally clean and clutter-free. Insipration was taken from sites such as Google Search
+- A very light background colour was added to reduce the glare effect of an all-white background
+- There is a simple navigation structure throughout with no navigation bar
+- The user is given signals to which areas can be clicked throuhg the use of the cursor pointer
+- Unintentional actions are prevented through the use of features such as 'hidden' and 'disable click'
 
-
-
-## Features 
-
-- The site has a clear title that gives the user an instant sense of what the website is about: It's a Maths Quiz site.
+### **User Experience**
+- The Font chosen was IBM Plex Mono which I found at Google Fonts. The font was a computational/mathematical style type that reflected the purpose of the site
+- The color palette chosen was soft blue and pink tones. This was to accentuate the simple, unsophisticated style of the site.
 - There are 3 pages:
   - Index page where user gets introduced to what the site is for and what they need to do
   - Quiz page where the user selects a topic and takes part in the quiz
   - End page where user receives a Report Card and can restart the quiz again.
 - The user can reset the quiz at any time by clicking the RESET button.
-- The page format ant styling is simple and uncluttered
-- The font used is a IBM Plex Mono which I think works well with my Mathematical Quiz.
-- Each topic has been chosen carefully. They are fundamental to the Junior Cycle Mathematics course.
 - The user gets a Report Card when they have finished:
   - A summary of the number of correct anwers
   - A grade based on the number of correct answers
@@ -49,23 +43,40 @@ Below you can see an image of the final site in the Am I Responsive tool which s
     - D = Pink
     - E = Red
 
-------
 
-------
+## Features 
+- Simple, uncluttered style with basic color palette
+- No imagery
+- Each topic has been chosen carefully. They are fundamental to the Junior Cycle Mathematics course.
 
-## Testing 
+
+## Features Yet To Be Implemented
+- Add more Questions and topics.
+- Add the ability to select a quiz with randomly selected questions from across a number of topics.
+- With the increased questions, an improved Report Card that has grades assigned to a range of scores.
+- Ability to import your own set of questions.
+
+## Technologies Used
+- HTML
+- CSS
+- Javascript
+- Python
+
+## Testing
 
 - I have tested this site in various browsers:
   - Chrome(my main wokring browser)
-  - [Safari](assets/images/safaritest.png)
-  - [Firefox](assets/images/firefoxtest.png).
+  - [Safari](assets/images/safari.png)
+  - [Firefox](assets/images/firefox.png).
 
 - I have tested the site to ensure that it is responsive and maintains it's structure and integrity with various screen sizes and devices other than my main working device(laptop):
-  - [mobile](assets/images/mobiletest.jpg)
+  - [mobile](assets/images/mobilequiz.jpg)
   - [tablet](assets/images/tablettest.jpg)
-  - [desktop](assets/images/desktoptest.png)
+  - [desktop](assets/images/desktop.png)
 
 - I have confirmed with users that the text is easy to read and the quiz is intuitive and logical to use.
+- All code works as intended.
+- There are no console errors visible.
 
 ![Lighthouse Accessibility Test Score](assets/images/lighthouse.png)
 
@@ -94,7 +105,8 @@ Below you can see an image of the final site in the Am I Responsive tool which s
 
 
 ## Deployment 
-### Cloning and Forking
+### Cloning, Forking and Local Deployment
+
 - To CLONE: 
   - Navigate to the repository: [Quizzical](https://github.com/culanomeara/quizzical)
   - Above the list of files, click Code.
@@ -102,12 +114,21 @@ Below you can see an image of the final site in the Am I Responsive tool which s
   - Open Terminal and change to the new directory where you want the cloned files to go
   - type git clone and paste in the copied url from the repository
 
+
 - To FORK:
   - Navigate to the repository: [Quizzical](https://github.com/culanomeara/quizzical)
   - At top of page, click on FORK
   - Select the owner, name and description for the new fork.
   - Select which branches you want to fork.
   - Create fork.
+
+
+- LOCAL:
+  - Navigate to the repository: [Quizzical](https://github.com/culanomeara/quizzical)
+  - On top menu bar, select Settings
+  - On Side menu bar, select Pages
+  - On the GitHub pages section, locate the dropdown that displays the word “None”. Click the dropdown and select the “Master” or “Main” branch.
+  - The page will refresh automatically and provide a link to the deployed site. Click this link to load the deployed site. It may take a few minutes to appear.
 
 ### Remote
 - The site was deployed to GitHub pages. The steps to deploy are as follows: 
