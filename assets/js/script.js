@@ -3,20 +3,24 @@ let qtopic;
 let qCounter = 1;
 let totalQuestion = 4;
 
-//This function runQuiz takes in the argument of quizTopic and then using a switch case,
-//calls the relevant topic question function
+//This function runQuiz takes in the argument of quizTopic and calls the display question function
 function runQuiz(quizTopic) {
     let element = document.getElementById("next");
     element.addEventListener("click", nextQ);
     let resetQuiz = document.getElementById("reset");
     resetQuiz.addEventListener("click", endQuiz);
+    for (let element of document.getElementsByClassName("topic")) {
+        element.hidden = true;
+    };
     document.getElementById('quizContainer').hidden = false;
-    disableTopics();
-    qtopic=quizTopic;
+    qtopic = quizTopic;
+    let displaytopic=qtopic.toUpperCase();
+    document.getElementById('currentTopic').textContent = displaytopic;
     document.getElementById(qtopic).style.backgroundColor = "rgba(255, 192, 203, 0.5)";
     displayQuestion(qtopic, qCounter);
 }
 
+//function that calls the next question when NEXT button is clicked
 function nextQ() {
     qCounter++;
     enableAnswers();
@@ -42,6 +46,7 @@ function nextQ() {
 
 };
 
+//function that displays the question data with parameters of the topic and what question number to display
 function displayQuestion(qtopic, qCounter) {
     let i = qCounter - 1;
     let qtopicdata = eval(qtopic.concat("QData"));
@@ -57,6 +62,7 @@ function displayQuestion(qtopic, qCounter) {
     document.getElementById('ans4').style.backgroundColor = '';
 }
 
+//Once an answer is clicked, this function checks the user answer against the stored correct answer
 function checkAnswer(userSelect) {
     disableAnswers();
     if (document.getElementById('next') == null) {
@@ -83,6 +89,7 @@ function checkAnswer(userSelect) {
     document.getElementById('score').textContent = `Score: ${currentScore}`;
 }
 
+//function that is run once all questions have been answered
 function endQuiz() {
     currentScore = 0;
     qCounter = 1;
@@ -90,13 +97,15 @@ function endQuiz() {
     location.reload();
 }
 
-function disableTopics() {
-    document.getElementById('trigonometry').classList.add('disabled');
-    document.getElementById('algebra').classList.add('disabled');
-    document.getElementById('geometry').classList.add('disabled');
-    document.getElementById('statistics').classList.add('disabled');
+/*function hideTopics(quizTopic) {
+    let topic = quizTopic;
+    if
+    document.getElementById('trigonometry').hidden = true;
+    document.getElementById('algebra').hidden = true;
+    document.getElementById('geometry').hidden = true;
+    document.getElementById('statistics').hidden = true;
 }
-
+*/
 function enableAnswers() {
     document.getElementById('ans1').classList.remove('disabled');
     document.getElementById('ans2').classList.remove('disabled');
@@ -110,4 +119,3 @@ function disableAnswers() {
     document.getElementById('ans3').classList.add('disabled');
     document.getElementById('ans4').classList.add('disabled');
 }
-
