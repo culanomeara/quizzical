@@ -11,8 +11,6 @@ This site is aimed at Junior Cycle students looking to revise Mathematics topics
 
 ------
 
-
-
 ------
 
 ## Testing 
@@ -30,7 +28,7 @@ This site is aimed at Junior Cycle students looking to revise Mathematics topics
 - I have confirmed with users that the text is easy to read and the navigation menu easy to use.
 - I have checked that the contact form works and ensured that required fields work as intended and that the form validates the input.
 
-![Lighthouse Accessibility Test Score](assets/images/Lighthouse_accessibility_score.png)
+![Lighthouse Accessibility Test Score](assets/images/lighthouse.png)
 
 ### Validator Testing 
 

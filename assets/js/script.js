@@ -44,7 +44,6 @@ function nextQ() {
         document.getElementById('finish').id = 'next';
         finishQuiz(currentScore, qtopic);
     };
-
 };
 
 //function that displays the question data with parameters of the topic and what question number to display
@@ -77,7 +76,6 @@ function checkAnswer(userSelect) {
     let ansColor = document.getElementById(userSelect);
     let qtopicdata = eval(qtopic.concat("QData"));
     correctanswer = qtopicdata[i].answer;
-
     if (userAnswer == correctanswer) {
         currentScore++;
         document.getElementById('feedback').textContent = "Well done!";
@@ -96,6 +94,7 @@ function finishQuiz() {
     location.href = 'end.html';
 }
 
+//function to call the report card data and display it in end.html
 function reportCard() {
     let element = document.getElementById('grade');
     let reportScore = localStorage.getItem("reportscore");
