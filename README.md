@@ -1,6 +1,6 @@
 # Let's Get Quizzical
 
-This site is aimed at Junior Cycle students looking to revise Mathematics topics. It gives students four topics to choose from. Each topic contains a set number of multiple choice questions and feedbackm is given after each question.
+This site is aimed at Junior Cycle students looking to revise Mathematics topics. It gives students four topics to choose from. Each topic contains a set number of multiple choice questions and feedback is given after each question. Users then receive at Report Card when the quiz is complete.
 
 ## Features 
 
@@ -39,8 +39,7 @@ This site is aimed at Junior Cycle students looking to revise Mathematics topics
   - [tablet](assets/images/tablettest.jpg)
   - [desktop](assets/images/desktoptest.png)
 
-- I have confirmed with users that the text is easy to read and the navigation menu easy to use.
-- I have checked that the contact form works and ensured that required fields work as intended and that the form validates the input.
+- I have confirmed with users that the text is easy to read and the quiz is intuitive and logical to use.
 
 ![Lighthouse Accessibility Test Score](assets/images/lighthouse.png)
 
@@ -55,17 +54,17 @@ This site is aimed at Junior Cycle students looking to revise Mathematics topics
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fculanomeara.github.io%2Fquizzical%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-### Fixed Bugs/Improvements
+### Fixed Bugs
+- Issue where question topic was not being passed to function correctly
+- Issue with changing topic and resetting all of the code to restart quiz.
+- Styling issues with certain areas where styling wasn't being applied inside.
 
-- I had a number of bugs that I worked thru:
-  - Issue where question topic was not being passed to function correctly
-  - Issue with changing topic and resetting all of the code to restart quiz.
-  - Styling issues with certain areas where styling wasn't being applied inside.
+### Improvements
   - Very long code sections were removed or tidied up with more efficeient code structure or function such as:
     - single displayQuestion function instead of different function for each topic.
     - using a let of function to read thru class array elements to carry out a task rather than all separate.
   - gave onclick function a unique name as it was being called repeatedly
-  - 
+  - I gave alot of time to coding the quiz to hide areas or prevent users from clicking other answers once they had chosen one. This ensures that the user experience is intuitive and streamlined.
 
 
 ## Deployment 
