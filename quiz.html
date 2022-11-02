@@ -16,6 +16,7 @@
 
 <body>
     <h1>Let's get Quizzical about Maths</h1>
+    <!--Section where quiz topics are displayed and user asked to choose one-->
     <h2 id="pick">Pick a topic</h2>
     <div class="topicContainer">
         <div class="topic" id="trigonometry" onclick="runQuiz('trigonometry')">Trigonometry</div>
@@ -23,6 +24,7 @@
         <div class="topic" id="geometry" onclick="runQuiz('geometry')">Geometry</div>
         <div class="topic" id="statistics" onclick="runQuiz('statistics')">Statistics</div>
     </div>
+    <!--Section where quiz areas: Progress, question and 4 answers are displayed-->
     <div id="quizContainer" hidden>
         <div id="currentTopic"></div>
         <div id="questionProgress">
@@ -36,7 +38,7 @@
             <div class="answer" id="ans3" onclick="checkAnswer('ans3')"></div>
             <div class="answer" id="ans4" onclick="checkAnswer('ans4')"></div>
             <div id="feedback"> </div>
-
+            <!--Section where control buttons are displayed-->
             <div class="controls">
                 <button class="controlButton" id="next" hidden>Next
                 </button>
@@ -46,7 +48,7 @@
         </div>
     </div>
 
-
+<!--Scripts laoded from 2 files: data.js holds the Q data and script.js holds the functions-->
     <script src="assets/js/data.js"></script>
     <script src="assets/js/script.js"></script>
     <noscript>
