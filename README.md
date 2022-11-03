@@ -95,8 +95,8 @@ Below are the user stories that needed to be fulfilled for the project to be suc
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fculanomeara.github.io%2Fquizzical%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-  - JS
-    - Put JS code through [JSHINT](https://jshint.com/) without error
+- JS
+  - Put JS code through [JSHINT](https://jshint.com/) without error
 
 ### Fixed Bugs
 - Issue where question topic was not being passed to function correctly
@@ -137,18 +137,6 @@ Below are the user stories that needed to be fulfilled for the project to be suc
   - On Side menu bar, select Pages
   - On the GitHub pages section, locate the dropdown that displays the word “None”. Click the dropdown and select the “Master” or “Main” branch.
   - The page will refresh automatically and provide a link to the deployed site. Click this link to load the deployed site. It may take a few minutes to appear.
-
-### Remote
-- The site was deployed to GitHub pages. The steps to deploy are as follows: 
-  - In the GitHub repository, click on the Settings icon 
-  - On the left-hand menu, click on Pages
-  - From the options that appear, select Deploy from branch, then select MAIN
-  - Once you save those changes, the site goes live. It takes about 10 mins before you can see the live site.
-
-The live link can be found here - https://culanomeara.github.io/quizzical/ 
-
-
-## Credits 
 
 ### Content
 - Text is all my own
