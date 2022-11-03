@@ -47,7 +47,10 @@ Below are the user stories that needed to be fulfilled for the project to be suc
 ## Features 
 - Simple, uncluttered style with basic color palette
 - No imagery
-- Each topic has been chosen carefully. They are fundamental to the Junior Cycle Mathematics course.
+- Minimal number of buttons, clickable areas. ![Start button](assets/images/startbtn.png)
+
+- Each topic has been chosen carefully. They are fundamental to the Junior Cycle Mathematics course. ![Topics](assets/images/topics.png)
+
 
 
 ## Features Yet To Be Implemented
@@ -71,7 +74,7 @@ Below are the user stories that needed to be fulfilled for the project to be suc
 
 - I have tested the site to ensure that it is responsive and maintains it's structure and integrity with various screen sizes and devices other than my main working device(laptop):
   - [mobile](assets/images/mobilequiz.jpg)
-  - [tablet](assets/images/tablettest.jpg)
+  - [tablet](assets/images/ipad.png)
   - [desktop](assets/images/desktop.png)
 
 - I have confirmed with users that the text is easy to read and the quiz is intuitive and logical to use.

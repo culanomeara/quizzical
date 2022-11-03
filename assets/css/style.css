@@ -24,7 +24,8 @@ body {
   width: 50%;
   border-radius: .5rem;
   border: 3px solid blue;
-  outline: 3px solid violet;
+  box-shadow: 0 0 0 3px green;
+  /*outline: 3px solid violet;*/
   font-weight: 800;
   font-size: x-large;
   height: 30px;
