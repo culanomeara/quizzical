@@ -6,7 +6,7 @@ This site is aimed at Junior Cycle students looking to revise Mathematics topics
 By clicking [here](https://culanomeara.github.io/quizzical), you can access the final Quizzical deployed site hosted on GitHub Pages.
 
 ## Responsiveness
-Below you can see a screenshot of the deployed site in the Am I Responsive tool which shows the responsiveness of the site to a number of viewports. Attached the above header is a link to the Am I Responsive tool.  
+Below you can see a screenshot of the deployed site in the Am I Responsive tool which shows the responsiveness of the site to a number of viewports. 
 ![Quizzical-Am-I-Responsive-Image](assets/images/amiresponsivequizzical.png)
 
 ## User Interface - User Experience
@@ -47,9 +47,9 @@ Below are the user stories that needed to be fulfilled for the project to be suc
 ## Features 
 - Simple, uncluttered style with basic color palette
 - No imagery
-- Minimal number of buttons, clickable areas. ![Start button](assets/images/startbtn.png)
-
-- Each topic has been chosen carefully. They are fundamental to the Junior Cycle Mathematics course. ![Topics](assets/images/topics.png)
+- Minimal number of buttons, clickable areas. [Start button](assets/images/startbtn.png)
+- Visual signals when user moves over a clickable area. Cursor pointer and transform used here.
+- Each topic has been chosen carefully. They are fundamental to the Junior Cycle Mathematics course. [Topics](assets/images/topics.png)
 
 
 
@@ -98,6 +98,7 @@ Below are the user stories that needed to be fulfilled for the project to be suc
 - Issue where question topic was not being passed to function correctly
 - Issue with changing topic and resetting all of the code to restart quiz.
 - Styling issues with certain areas where styling wasn't being applied inside.
+- Issue with safari and firefox browsers where outline border radius was not working. Changed setting to box-shadow and bug was fixed. [Browser bug](assets/images/outlinebug.png)
 
 ### Improvements
   - Very long code sections were removed or tidied up with more efficeient code structure or function such as:
