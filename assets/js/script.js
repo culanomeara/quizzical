@@ -11,7 +11,7 @@ function runQuiz(quizTopic) {
     reset.addEventListener("click", resetQuiz);
     for (let element of document.getElementsByClassName("topic")) {
         element.hidden = true;
-    };
+    }
     document.getElementById('pick').hidden = true;
     document.getElementById('quizContainer').hidden = false;
     qtopic = quizTopic;
@@ -25,7 +25,7 @@ function runQuiz(quizTopic) {
 function nextQ() {
     qCounter++;
     enableAnswers();
-    currentQtopic = qtopic;
+    let currentQtopic = qtopic;
     document.getElementById('feedback').textContent = "";
     if (currentQtopic == "none") {
         alert('Please select a topic for the quiz');
@@ -43,8 +43,8 @@ function nextQ() {
         document.getElementById('finish').innerHTML = 'Next';
         document.getElementById('finish').id = 'next';
         finishQuiz(currentScore, qtopic);
-    };
-};
+    }
+}
 
 //function that displays the question data with parameters of the topic and what question number to display
 function displayQuestion(qtopic, qCounter) {
@@ -69,7 +69,7 @@ function checkAnswer(userSelect) {
         document.getElementById('finish').hidden = false;
     } else {
         document.getElementById('next').hidden = false;
-    };
+    }
     let correctanswer;
     let i = qCounter - 1;
     let userAnswer = document.getElementById(userSelect).textContent;
@@ -126,15 +126,15 @@ function resetQuiz() {
     location.reload();
 }
 
-/* enable/disable answer divs depending on what stage of quiz it's at */
+// enable/disable answer divs depending on what stage of quiz it's at //
 function enableAnswers() {
     for (let element of document.getElementsByClassName("answer")) {
         element.classList.remove('disabled');
-    };
+    }
 }
 
 function disableAnswers() {
     for (let element of document.getElementsByClassName("answer")) {
         element.classList.add('disabled');
-    };
+    }
 }
