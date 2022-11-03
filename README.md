@@ -19,22 +19,22 @@ Below are the user stories that needed to be fulfilled for the project to be suc
 * To be able to play again.
 
 ### **User Interface**
-- The User interface is intentionally clean and clutter-free. Insipration was taken from sites such as Google Search
+- The User interface is intentionally clean and clutter-free. Inspiration was taken from sites such as Google Search
 - A very light background colour was added to reduce the glare effect of an all-white background
 - There is a simple navigation structure throughout with no navigation bar
-- The user is given signals to which areas can be clicked throuhg the use of the cursor pointer
+- The user is given signals to which areas can be clicked through the use of the cursor pointer
 - Unintentional actions are prevented through the use of features such as 'hidden' and 'disable click'
 
 ### **User Experience**
 - The Font chosen was IBM Plex Mono which I found at Google Fonts. The font was a computational/mathematical style type that reflected the purpose of the site
-- The color palette chosen was soft blue and pink tones. This was to accentuate the simple, unsophisticated style of the site.
+- The colour palette chosen was soft blue and pink tones. This was to accentuate the simple, unsophisticated style of the site.
 - There are 3 pages:
   - Index page where user gets introduced to what the site is for and what they need to do
   - Quiz page where the user selects a topic and takes part in the quiz
   - End page where user receives a Report Card and can restart the quiz again.
 - The user can reset the quiz at any time by clicking the RESET button.
 - The user gets a Report Card when they have finished:
-  - A summary of the number of correct anwers
+  - A summary of the number of correct answers
   - A grade based on the number of correct answers
   - A colour that matches the Grade:
     - A = Green
@@ -45,7 +45,7 @@ Below are the user stories that needed to be fulfilled for the project to be suc
 
 
 ## Features 
-- Simple, uncluttered style with basic color palette
+- Simple, uncluttered style with basic colour palette
 - No imagery
 - Minimal number of buttons, clickable areas. [Start button](assets/images/startbtn.png)
 - Visual signals when user moves over a clickable area. Cursor pointer and transform used here.
@@ -68,7 +68,7 @@ Below are the user stories that needed to be fulfilled for the project to be suc
 ## Testing
 
 - I have tested this site in various browsers:
-  - Chrome(my main wokring browser)
+  - Chrome(my main working browser)
   - [Safari](assets/images/safari.png)
   - [Firefox](assets/images/firefox.png).
 
@@ -101,7 +101,7 @@ Below are the user stories that needed to be fulfilled for the project to be suc
 - Issue with safari and firefox browsers where outline border radius was not working. Changed setting to box-shadow and bug was fixed. [Browser bug](assets/images/outlinebug.png)
 
 ### Improvements
-  - Very long code sections were removed or tidied up with more efficeient code structure or function such as:
+  - Very long code sections were removed or tidied up with more efficient code structure or function such as:
     - single displayQuestion function instead of different function for each topic.
     - using a let of function to read thru class array elements to carry out a task rather than all separate.
   - gave onclick function a unique name as it was being called repeatedly
