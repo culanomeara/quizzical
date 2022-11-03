@@ -28,12 +28,12 @@ Below are the user stories that needed to be fulfilled for the project to be suc
 ### **User Experience**
 - The Font chosen was IBM Plex Mono which I found at Google Fonts. The font was a computational/mathematical style type that reflected the purpose of the site
 - The colour palette chosen was soft blue and pink tones. This was to accentuate the simple, unsophisticated style of the site.
-- There are 3 pages:
-  - Index page where user gets introduced to what the site is for and what they need to do
-  - Quiz page where the user selects a topic and takes part in the quiz
-  - End page where user receives a Report Card and can restart the quiz again.
 - The user can reset the quiz at any time by clicking the RESET button.
-- The user gets a Report Card when they have finished:
+- There are 3 pages:
+  - Index page where user gets introduced to what the site is for and what they need to do [Index](assets/images/index.png)
+  - Quiz page where the user selects a topic [Topic Choice](assets/images/topicchoice.png) and takes part in the quiz [Quiz](assets/images/quizquestion.png)
+  - End page where user receives a Report Card and can restart the quiz again.[Report Card](assets/images/reportcard.png)
+- On the Report Card there is:
   - A summary of the number of correct answers
   - A grade based on the number of correct answers
   - A colour that matches the Grade:
@@ -45,12 +45,13 @@ Below are the user stories that needed to be fulfilled for the project to be suc
 
 
 ## Features 
-- Simple, uncluttered style with basic colour palette
-- No imagery
-- Minimal number of buttons, clickable areas. [Start button](assets/images/startbtn.png)
-- Visual signals when user moves over a clickable area. Cursor pointer and transform used here.
+- Simple, uncluttered style with basic colour palette [Quiz page](assets/images/quizpage.png)
+- No imagery to avoid distractions, clutter.
+- Minimal number of buttons, clickable areas. Intuitive for users. [Start button](assets/images/startbtn.png)
+- Visual signals when user moves over a clickable area. Cursor pointer and transformed size and colour used here. [Button transform size and colour](assets/images/responsive.png)
 - Each topic has been chosen carefully. They are fundamental to the Junior Cycle Mathematics course. [Topics](assets/images/topics.png)
-
+- When user clicks on a correct answer, it goes green and a message below says WELL DONE! [Correct Answer](assets/images/correctresponse.png)
+- When user clicks on a wrong answer, it goes red and a message below says Oops and informs them of what the correct answer was [Wrong Answer](assets/images/wrongresponse.png)
 
 
 ## Features Yet To Be Implemented
@@ -69,12 +70,12 @@ Below are the user stories that needed to be fulfilled for the project to be suc
 
 - I have tested this site in various browsers:
   - Chrome(my main working browser)
-  - [Safari](assets/images/safari.png)
+  - [Safari](assets/images/safaritest2.png)
   - [Firefox](assets/images/firefox.png).
 
 - I have tested the site to ensure that it is responsive and maintains it's structure and integrity with various screen sizes and devices other than my main working device(laptop):
   - [mobile](assets/images/mobilequiz.jpg)
-  - [tablet](assets/images/ipad.png)
+  - [tablet](assets/images/tablettest2.jpeg)
   - [desktop](assets/images/desktop.png)
 
 - I have confirmed with users that the text is easy to read and the quiz is intuitive and logical to use.
